@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>By No Game</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+
+	/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, font, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			outline: 0;
+			font-size: 100%;
+			vertical-align: baseline;
+			background: transparent;
+		}
+		body {
+			line-height: 1;
+		}
+		ol, ul {
+			list-style: none;
+		}
+		blockquote, q {
+			quotes: none;
+		}
+		blockquote:before, blockquote:after,
+		q:before, q:after {
+			content: '';
+			content: none;
+		}
+
+		/* remember to define focus styles! */
+		:focus {
+			outline: 0;
+		}
+
+		/* remember to highlight inserts somehow! */
+		ins {
+			text-decoration: none;
+		}
+		del {
+			text-decoration: line-through;
+		}
+
+		/* tables still need 'cellspacing="0"' in the markup */
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+
+		*{
+			box-sizing: border-box;
+			font-family: "open sans", sans-serif;	
+			padding: 0;
+		}
+
+		.container{
+			width: 1540px;
+			display: flex;			
+			justify-content: space-between;
+			margin: 0 auto;
+		}
+
+		.header{
+			width: 100%;
+			border: 1px solid #E5E5E6;	
+		}
+
+		.sosyal-medya ul{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			list-style: none;
+			margin-right: 8px;
+		}
+
+		.sosyal-medya ul li{
+			margin-right: 20px;
+			margin-top: 5px;
+		}
+
+		.sosyal-medya a{
+			text-decoration: none;
+			color: #969696;
+			font-size: 12px;
+			font-weight: bold;
+		}
+
+		.sosyal-medya label{
+			margin-left: 4px;
+		}
+
+		.sosyal-medya label:hover{
+			cursor: pointer;
+		}
+
+		.ust-kategoriler ul{
+			display: flex;
+			list-style: none;
+			justify-content: center;
+		}
+
+		.ust-kategoriler ul li{	
+			padding: 15px ;
+			font-size: 12px;
+			font-weight: bold;
+		}
+
+		.ust-kategoriler ul li a{
+			text-decoration: none;
+			color: #969696;
+		}
+
+		.gece-modu{
+			display: flex;
+		}
+
+		.gece-modu label{
+			color: #495057;
+			cursor: pointer;
+		}
+
+		.gece-modu-ikon{
+			margin-top: 10px;
+			cursor: pointer;
+		}
+
+		.gece-modu-cubuk{
+			width: 35px;
+			height: 20px;
+			border: 3px solid #969696;
+			margin-top: 1px;
+			border-radius: 10px;
+			position: relative;
+		}
+
+		.gece-modu-yuvarlak{
+			width: 10px;
+			height: 10px;
+			border-radius: 50px;
+			position: absolute;
+			align-items: center;
+			background-color: #969696;
+			top: 2px;
+			left: 2px;
+		}
+
+		.yardim-merkezi label{
+			color: #bf2f11;
+			cursor: pointer;
+		}
+
+		.ilan-ekle label{
+			color: #297927;
+			cursor:pointer;
+			font-weight: bold;
+		}
+
+		i{
+			font-size: 24px;
+		}
+
+		.ikincisatir{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			padding-top: 20px;
+			font-size: 12px;
+		}
+
+		.logo img{
+			width: 172px;
+			height: 48px;
+		}
+		
+		.input-ara-grup{
+			display: flex;
+		}
+
+		.input-ara input{
+			width: 850px;
+			height: 40px;
+			font-size: 18px;
+			border-radius: 5px 0 0 5px;
+			outline: 0;
+			border: 2px solid #E4E4E4;
+			border-right: none;
+			caret-color: orange;
+			padding: 15px;
+		}
+
+		.ikon-ara i{
+			background-color: #E4E4E4;
+			height: 40px;
+			width: 50px;
+			border-radius: 0 5px 5px 0;			
+			color: black;
+			text-align: center;
+			line-height: 36px;
+		}
+
+		.ara-grup{
+			display: inline-flex;
+		}
+
+		.ikonlar, .kullanici{
+			display: flex;
+			color: #7E7D7D;
+		}
+
+		.kullanici{
+			height: 45px;
+			border: 1px solid #e4e4e4;
+			border-radius: 50px;
+		}
+		
+		.ikonlar a{
+			text-decoration: none;
+			color: #7E7D7D;
+			text-align: center;
+			line-height: 2px;
+		}
+		
+		.zil, .sepet , .kullanici-foto{
+			width: 45px;
+			height: 45px;
+			border: 1px solid #e4e4e4;			
+			text-align: center;
+			line-height: 50px;
+			border-radius: 50%;
+		}
+
+		.zil, .sepet, .kullanici{
+			margin-left: 8px;
+		}
+
+		.zil i, .sepet i{
+			font-size: 20px;
+		}
+
+		 .kullanici-foto{
+		 	width: 40px;
+		 	height: 36px;
+		 	border: 1px solid #e4e4e4;
+			border-radius: 50px;
+			line-height: 45px;
+			margin: 3px 2px;
+		 }
+
+		.hesabim a, .giris-kayit a{
+			color: #969696;
+			font-weight: bold;
+			margin: 5px;
+		}
+
+		.hesabim{
+			font-size: 11px;
+		}
+
+		.giris-kayit{
+			font-size: 13px;
+		}
+
+		.img-yazi{
+			display: flex;
+		}
+
+		.hesabim-giris {
+			display: block;
+			margin-top:5px;
+			margin-right: 5px;
+		}	
+
+		.giris-kayit{
+			line-height: 18px;
+		}	
+
+		.ucuncusatir{
+			width: 100%;
+			border: 1px solid #d0d0d0;
+			border-right: none;
+			border-left: none;
+			margin-top: 15px;
+			box-shadow: 0 2px 2px 0 lightgray;
+		}
+
+		.anamenu{
+			width: 100%;			
+		}
+
+		.anamenu ul{
+			list-style: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;		
+		}
+
+		.anamenu ul li{
+			position: relative;
+			border-right: 1px solid #d0d0d0;
+		}
+
+		.anamenu ul li a{
+			display: block;
+			text-decoration: none;
+			color: #686868;
+			font-size: 14px;
+			font-weight: 600;
+			letter-spacing: 0.8px;
+			padding: 15px 45px;
+		}
+
+		.anamenu ul li a:hover{
+			color: #fff;
+		}
+
+		.anamenu ul li:first-child{
+			content: "";
+			border-left: 1px solid #d0d0d0;
+		}
+
+		.anamenu ul li:hover{
+			background-color: #ED502F;
+		}
+
+		.anamenu ul li ul {
+			margin-top: 15px;
+			display:none;
+			position:absolute;
+			background: white;
+			top:  30px;
+			z-index: 999;
+		}
+
+		.anamenu ul li:after {
+			content: " "; 
+			display: block; 
+			position: absolute; 
+			background: transparent; 
+			bottom: -5px; 
+			width: 100%; 
+			height: 5px;
+		}
+
+		.anamenu ul li ul li {
+			display:block;
+		}
+
+		.anamenu ul li ul li a {
+			color: #686868;
+			text-align: left;
+			padding: 15px;
+			width: 250px;
+		}
+
+		.anamenu ul li ul li a:hover{
+			color: #424242;
+		}
+
+		.anamenu ul li ul li:hover {
+			background: #fff;
+		}
+
+		.anamenu ul li:hover ul {
+			display:block;
+		}
+
+		.hikayeler-satiri{
+			display: flex;
+			justify-content: center;
+			margin-top: 20px;
+			height: 150px;
+		}
+
+		.container2{
+			width: 800px;
+			display: flex;
+			justify-content: center;
+		}
+
+		.hikayeler{
+			margin: -10px auto;
+			padding: 10px;
+			width: 30%;
+		}
+
+		.hikayeler img{
+			width: 73px;
+			height: 73px;
+			border-radius: 50px;
+			border: 3px solid #fff;
+			outline: 2px solid #f0a166;
+		}
+
+		.hikaye-ismi {
+			text-align: center;
+			font-size: 15px;
+			color: black;
+			line-height: 20px;
+		}
+
+		.anamenu i{
+			font-size: 12px;
+			margin-left: 5px;
+		}
+
+		.article{
+			width: 100%;
+			height: 470px;
+			background-color: #F3F3F3;
+			border: 1px solid #DDDDDD;
+			border-bottom: none;
+		}
+
+		.owl-carousel{
+			margin-top: 25px;
+		}
+
+		.populerUrunler{
+			margin-top: 25px;
+			width: 100%;
+			height: 500px;
+		}
+
+		.populerUrunlerBaslik{
+			text-align: center;
+			font-size: 25px;
+			color: #495057;
+			font-weight: 700;
+			letter-spacing: 0.5px;
+		}
+
+		.item{
+			display: flex;
+			width: 300px;
+			height: 395px;
+			border: 1px solid #e4e4e4;
+			margin: 5px;
+			padding: 7px;
+			border-radius: 5px;
+			box-shadow: 0.5px 0.5px 1.5px 1.5px #e5e5e5;
+		}
+
+		.item img{
+			width: 285px;
+			height: 285px;
+			border-radius: 5px;
+		}
+
+		.urunaciklama{
+			color: rgb(107 107 107);
+			text-align: center;
+			margin-top: 15px;
+			font-size: 14px;
+		}
+
+		 a{
+			text-decoration: none;
+		}
+
+		.urun-aciklama-altcizgi{
+			width: 285px;
+			height: 1.5px;
+			background-color: #e4e4e4;
+			margin-top: 20px;
+		}
+
+		.buton i{
+			background-color: #eb3c18;
+			padding: 8px;
+			font-size: 14px;
+		}
+
+		.buton{
+			width: 110px;
+			height: 30px;
+			background-color: #ed502f;
+			margin: 10px auto;
+			border-radius: 5px;
+			color: whitesmoke;
+			font-weight: 600;
+			font-size: 16px;
+		}
+
+		.buton label{
+			margin-left: 10px;
+		}
+
+		.oyun-bilgileri{
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			margin-left: 25px;
+		}
+
+		.oyun-fotografi{
+			margin: 10px;
+			position: relative;
+			z-index: 0;
+		}
+
+		.oyun-fotografi img{
+			width: 25%;
+			width: 350px;
+			height: 450px;
+			border-radius: 5px;
+		}
+
+		.enPopulerOyunlar{
+			width: 100%;
+			height: 1750px;
+			background-color: #F3F3F3;
+			box-shadow: 1px 1px 3px 3px lightgray;
+		}
+
+		.enPopulerOyunlar-baslik{
+			font-size: 25px;
+			font-weight: 700;
+			color: #495057;
+			letter-spacing: 0.5px;
+		}
+
+		.enPopulerOyunlar-baslik h1{
+			text-align: center;	
+			margin: 20px auto;
+			padding-top: 50px;
+		}
+
+		.resim-ustu-yazi{
+			width: 350px;
+			height: 55px;
+			position: absolute;
+			background-color: rgba(0,0,0,0.5);
+			bottom: 40px;		
+			text-align: center;
+		}
+
+		.resim-ustu-yazi h1{					
+			margin-top: 8px;
+			color: white;
+			font-weight: 700;
+			font-size: 22px;
+		}
+
+		.resim-ustu-yazi p{
+			font-size: 11px;
+			font-weight: 700;
+			line-height: 27px;
+			color: white;	
+			font-weight: 700;
+		}
+
+		.itemhaberler{
+			width: 300px;
+			height: 365px;
+			border: 1px solid #e4e4e4;
+			margin: 5px;
+			padding: 7px;
+			border-radius: 5px;
+			box-shadow: 0.5px 0.5px 1.5px 1.5px #e5e5e5;
+		}
+
+		.haberler-baslik h1{
+			font-size: 25px;
+			font-weight: 700;
+			color: #495057;
+		}
+
+		.haberler-yazisi{
+			font-size: 11px;
+			font-weight: 400px;
+			color: #495057;
+			line-height: 40px;
+		}
+
+		.haberler-ust{
+			margin-top: 100px ;
+			text-align: center;
+		}
+
+		.haberbasligi h5{
+			font-size: 18px;
+			color: #686868;
+			font-weight: 700;
+			margin-top: 10px;
+		}
+
+		.zaman label{
+			font-size: 11px;
+			font-weight: 400;
+			line-height: 25px;
+			color: #686868;
+		}
+
+		.tumunu-gor-buton{
+			width: 680px;
+			padding: 15px;
+			text-align: center;
+			font-size: 14px;
+			font-weight: 600;
+			color: #686868;
+			background-color: #e4e4e4;
+			margin: 15px auto;
+		}
+
+		.tumunu-gor-buton:hover{
+			color: #514a42;
+		}
+
+		.footer1{
+			width: 100%;
+			height: 200px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #E4E4E4;
+		}
+
+		.footer1-baslik h2{
+			color: #495057;
+			font-size: 18px;
+			font-weight: 500;
+		}
+
+		.footer1 ul li{
+			margin-top: 6px;
+		}
+
+		.footer1 ul li a{			
+			color: #7c7f80;
+			font-size: 14px;
+		}
+
+		.footer1 ul li a:hover{
+			color: #424242;
+			transition: 0.25s all;
+		}
+
+		.sira{
+			margin: 30px;
+		}
+
+		.footer2{
+			height: 80px;
+			width: 100%;
+			background-color: #C9C9C9;
+		}
+
+		.alt-ikonlar{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			margin: auto;
+			padding: 20px;
+			margin-top: -30px;
+		}
+
+		.alt-ikonlar i{
+			color: #c9c9c9;
+			font-size: 17px;
+		}
+
+		.alt-ikonlar img{
+			width: 80px;
+			height: 20px;
+			background-color: #c9c9c9;
+		}
+
+		.alt-ikonlar a{
+			background-color: #6F6F6F;
+			color: #e4e4e4;
+			border-radius: 40px;
+			padding: 8px;
+			margin: 12px;
+			text-decoration: none;
+			color: #e4e4e4;
+			text-align: center;
+			line-height: 2px;
+			margin-top: 25px;
+		}
+
+		.ikon{
+			font-size: 40px;
+		}
+
+		.footer3{
+			width: 100%;
+			height: 150px;			
+			background-color: #424243;
+		}
+
+		.footer3-flex{
+			display: flex;
+		}
+
+		.bynogamelogo{
+			width: 120px;
+			height: 30px;
+			margin: 25px 100px;
+		}
+
+		.iletisim-bilgileri p{
+			color: #c9c9c9;
+			font-size: 14px;
+			margin: 30px -30px;
+			line-height: 20px;
+			font-weight: 400;
+			text-align: center;			
+		}
+
+		.iletisim{
+			width: 50%;
+			display: block;
+		}
+
+		.teknik-yardim-liste ul{
+			display: flex;
+		}
+
+		.teknik-yardim-liste ul li{
+			margin-right: 70px;	
+			font-weight: 600;		
+		}
+
+		.teknik-yardim-liste ul li a{
+			color: #fff;
+			font-size: 12px;
+		}
+
+		.dmca-flex{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: -5px auto;
+		}
+
+		.odeme-yontemleri ul{
+			display: flex;
+			margin: 70px 50px;
+		}
+
+		.odeme-yontemleri ul li{
+			padding: 0px;
+		}
+
+		.odeme-yontemleri img{
+			width: 80px;
+			height: 50px;
+			margin-top: 10px;
+		}
+
+		.oyun-fotografi:hover{
+			box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.5), 0 7px 21px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 5px;
+			transform: scale(1.03);
+			transition: 0.5s all;	
+			height: 450px;
+			overflow: hidden;		
+		}
+
+		.teknik-yardim-liste ul li a:hover{
+			color: #969696;
+		}
+		
+		.home-slider .owl-next{
+		    position: absolute;
+		    top: 40%;
+		    right: 10px;
+		    border: 0 solid #000;
+		    font-size: 45px;
+	    }
+
+	    .home-slider .owl-prev{
+		    position: absolute;
+		    top: 40%;
+		    left: 10px;
+		    border: 0 solid #000;
+		    font-size: 45px;
+	    }
+
+		.home-slider .owl-dots{
+			display: flex;
+			justify-content: center;
+			margin-top: 15px;
+		}
+
+		.home-slider .owl-nav{
+			font-size: 70px;
+			color: gray;
+			opacity: 0.8;
+		}
+
+		.home-slider .owl-nav:hover{
+			color: white;
+			opacity: 1;
+			transition: 0.2s all;
+		}
+
+		.home-slider .owl-dots .owl-dot {
+			width: 2.5rem;
+			height: 6px;
+			margin-right: 1em;
+			background-color: black;
+			border-radius: 6px;
+			display: inline-block;
+		}
+
+		.home-slider .owl-dots .owl-dot.active {
+			background:#ed502f;
+		}
+
+		.home-slider2 .owl-next{
+		    position: absolute;
+		    top: 35%;
+		    right: -30px;
+		    font-size: 50px;
+	    }
+
+	    .home-slider2 .owl-prev{
+		    position: absolute;
+		    top: 35%;
+		    left: -30px;
+		    border: 0 solid #000;
+		    font-size: 45px;
+	    }
+
+		.home-slider2 .owl-nav{
+			font-size: 70px;
+			color: rgb(248 248 255);
+			opacity: 0.8;
+		}
+
+		.home-slider2 .owl-nav:hover{
+			color: gray;
+			opacity: 1;
+			transition: 0.2s all;
+		}
+
+		.haberlerSlider .owl-next{
+		    position: absolute;
+		    top: 35%;
+		    right: -30px;
+		    font-size: 50px;
+	    }
+
+	    .haberlerSlider .owl-prev{
+		    position: absolute;
+		    top: 35%;
+		    left: -30px;
+		    border: 0 solid #000;
+		    font-size: 45px;
+	    }
+
+		.haberlerSlider .owl-nav{
+			font-size: 70px;
+			color: gray;
+			opacity: 0.8;
+		}
+
+		.haberlerSlider  .owl-nav:hover{
+			color: #c9c9c9;
+			opacity: 1;
+			transition: 0.2s all;
+		}
+
+		.haberlerSlider{
+			margin-top: -3px;
+		}
+
+		.sosyal-medya ul li a:hover, .ust-kategoriler ul li a:hover, .ikonlar a:hover {
+			color: #424242;
+			transition: 0.1s all;
+		}
+
+		.home-slider2 .item:hover{
+			border: 1px solid black;
+		}
+
+		.haberlerSlider .itemhaberler:hover{
+			border: 1px solid red;
+		}
+
+		.yardim-merkezi label:hover{
+
+			color: darkred;
+		
+}
+		.ilan-ekle label:hover{
+			color: #005104;
+		}
+
+		@media( max-width: 800px )
+		{
+			.ikincisatir {flex-wrap:  wrap}
+			.ikincisatir > div {width:  100%}
+			.container {width:  100%}
+			.anamenu {display:  none}
+			.container2 {width:  100%; display:  none}
+			* {max-width:  100%; }
+		}
+
+	</style>
+
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="dist/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="dist/assets/owl.theme.default.min.css">
+
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+</head>
+<body>	
+	<div class="header">
+		<div class="container">
+			<div class="sosyal-medya">
+				<ul>
+					<li><a href="#"><div class="instagram"><i class="fab fa-instagram"></i><label>/bynogamecom</label></div></a></li>
+					<li><a href="#"><div class="tiktok"><i class="fab fa-facebook"></i><label>/bynogame</label></div></a></li>
+				</ul>
+			</div>
+
+			<div class="ust-kategoriler">
+				<ul>
+					<div class="gece-modu"><li><a href="#"></a><label>Gece Modu</label></a></li></div>
+					<div class="gece-modu-ikon"><div class="gece-modu-cubuk"><div class="gece-modu-yuvarlak"></div></div></div>
+					<li><a href="#">PARAM</a></li>
+					<li><a href="#">KAMPANYA</a></li>
+					<li><a href="#">HABERLER</a></li>
+					<li><a href="#">KURUMSAL</a></li>
+					<li><a href="#">YORUMLAR</a></li>
+					<li><a class="yardim-merkezi" href="#"><label>YARDIM MERKEZİ</label></a></li>
+					<li><a href="#" class="ilan-ekle"><label>İLAN EKLE, Satıcı ol!</label></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="ikincisatir">
+			<div class="logo">
+				<a href="#"><img src="resimler/bynogame.png"></a>
+			</div>
+
+			<div class="ara-grup">
+				<div class="input-ara">
+					<input type="text" name="ara" placeholder="ara">
+				</div>
+
+				<div class="ikon-ara">
+					<a href="#"><i class="fas fa-search"></i></a>
+				</div>				
+			</div>
+
+			<div class="ikonlar">
+				<div class="zil"><a href="#"><i class="fas fa-bell"></i></a></div>
+				<div class="sepet"><a href="#"><i class="fas fa-shopping-basket"></i></a></div>
+				<div class="kullanici">
+					<div class="img-yazi">
+						<div class="kullanici-foto"><a href="#"><i class="fas fa-user-alt"></i></a></div>
+					</div>
+					<div class="hesabim-giris">
+						<div class="hesabim">
+							<a href="#">HESABIM</a>
+						</div>
+						<div class="giris-kayit">
+							<a href="#">Giriş Yap / Kayıt Ol</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>			
+	</div>
+
+	<div class="ucuncusatir">	
+		<div class="container">
+			<div class="anamenu">
+				<ul>
+					<li><a href="#">OYUNLAR</a></li>
+					<li><a href="#">KNIGHT ONLINE<i class="fas fa-chevron-down"></i></a>
+						<ul>
+							<li><a href="#">Gold Bar</a></li>
+							<li><a href="#">Premium & Cash</a></li>
+							<li><a href="#">Item</a></li>
+							<li><a href="#">Cypher Ring</a></li>
+							<li><a href="#">Steam Gold Bar</a></li>
+							<li><a href="#">Steam Cüzdan Kodu</a></li>
+						</ul>
+							</li>
+					<li><a href="#">SKIN<i class="fas fa-chevron-down"></i></a>
+						<ul>
+							<li><a href="#">CS:GO</a></li>
+							<li><a href="#">RUST</a></li>
+							<li><a href="#">Team Fortress 2</a></li>
+							<li><a href="#">Rocket League</a></li>
+							<li><a href="#">Dota 2</a></li>
+							<li><a href="#">Path of Exile Orb</a></li>
+							<li><a href="#">H1Z1</a></li>
+						</ul>
+							</li>
+					<li><a href="#">VALORANT VP</a></li>
+					<li><a href="#">PUBG UC</a></li>
+					<li><a href="#">STEAM</a></li>
+					<li><a href="#">PAZAR</a></li>
+					<li><a href="#">DESTEKLE</a></li>
+					<li><a href="#">ÖDEME</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="hikayeler-satiri">
+		<div class="container2">
+			<div class="hikayeler">
+				<div class="hikaye-resmi">
+					<a href="#"><img src="resimler/hikayeler/knight.jfif"></a>
+				</div>
+				<div class="hikaye-ismi">
+					<label>Knight Online</label>
+				</div>
+			</div>
+
+
+			<div class="hikayeler">
+				<div class="hikaye-resmi">
+					<a href="#"><img src="resimler/hikayeler/csgo.png"></a>
+				</div>
+				<div class="hikaye-ismi">
+					<label>CS:GO Skin</label>
+				</div>
+			</div>
+
+
+			<div class="hikayeler">
+				<div class="hikaye-resmi">
+					<a href="#"><img src="resimler/hikayeler/pubg.png"></a>
+				</div>
+				<div class="hikaye-ismi">
+					<label>PUBG UC</label>
+				</div>
+			</div>
+
+
+			<div class="hikayeler">
+				<div class="hikaye-resmi">
+					<a href="#"><img src="resimler/hikayeler/futbolistt.webp"></a>
+				</div>
+				<div class="hikaye-ismi">
+					<label>FUTbolist UC</label>
+				</div>
+			</div>
+
+			<div class="hikayeler">
+				<div class="hikaye-resmi">
+					<a href="#"><img src="resimler/hikayeler/valorant.jpg"></a>
+				</div>
+				<div class="hikaye-ismi">
+					<label>Valorant Points</label>
+				</div>
+			</div>
+
+
+			<div class="hikayeler">
+				<div class="hikaye-resmi">
+					<a href="#"><img src="resimler/hikayeler/bbl.png"></a>
+				</div>
+				<div class="hikaye-ismi">
+					<label>BBL VP</label>
+				</div>
+			</div>
+
+
+			<div class="hikayeler">
+				<div class="hikaye-resmi">
+					<a href="#"><img src="resimler/hikayeler/blackdesert.jpg"></a>
+				</div>
+				<div class="hikaye-ismi">
+					<label>Black Desert</label>
+				</div>
+			</div>
+
+			<div class="hikayeler">
+				<div class="hikaye-resmi">
+					<a href="#"><img src="resimler/hikayeler/steam.jpeg"></a>
+				</div>
+				<div class="hikaye-ismi">
+					<label>Steam</label>
+				</div>
+			</div>
+
+			<div class="hikayeler">
+				<div class="hikaye-resmi">
+					<a href="#"><img src="resimler/hikayeler/leagueoflegends.jfif"></a>
+				</div>
+				<div class="hikaye-ismi">
+					<label>League of Legends</label>
+				</div>
+			</div>
+
+			<div class="hikayeler">
+				<div class="hikaye-resmi">
+					<a href="#"><img src="resimler/hikayeler/free.jpg"></a>
+				</div>
+				<div class="hikaye-ismi">
+					<label>Free Fire</label>
+				</div>
+			</div>
+
+			<div class="hikayeler">
+				<div class="hikaye-resmi">
+					<a href="#"><img src="resimler/hikayeler/mobilelegends.jpg"></a>
+				</div>
+				<div class="hikaye-ismi">
+					<label>Mobile Legends</label>
+				</div>
+			</div>
+
+			<div class="hikayeler">
+				<div class="hikaye-resmi">
+					<a href="#"><img src="resimler/hikayeler/silkroad.jfif"></a>
+				</div>
+				<div class="hikaye-ismi">
+					<label>Silkroad</label>
+				</div>
+			</div>
+
+			<div class="hikayeler">
+				<div class="hikaye-resmi">
+					<a href="#"><img src="resimler/hikayeler/pazarikon.png"></a>
+				</div>
+				<div class="hikaye-ismi">
+					<label>Pazar</label>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="article">
+		<div class="container">
+	 		<div class="home-slider owl-carousel ">
+	     		<a href="#"><div class="article_item"><img src="resimler/forma.webp"></div></a>
+	      		<a href="#"><div class="article_item"><img src="resimler/slider2.webp"></div></a>     
+	 		</div>
+		 </div>
+	</div>
+
+	<div class="populerUrunler">
+		<div class="populerUrunlerBaslik"><h1>Popüler Ürünler</h1></div>
+			<div class="container">
+		 		<div class="home-slider2 owl-carousel">
+
+		     	<a href="#"><div class="item"><img src="resimler/populerurunler/10tlsteamcuzdankodu.webp">
+		     			<div class="urunaciklama"><h5>10 TL Steam Cüzdan Kodu</h5></div>
+				     		<div class="urun-aciklama-altcizgi"></div>
+				     			<div class="buton"><i class="fas fa-shopping-cart"></i><label>75.00₺</label></div></a>
+								</div>
+
+				<a href="#"><div class="item"><img src="resimler/populerurunler/660pubgmobileuc.webp">
+		     			<div class="urunaciklama"><h5>660 PUBG Mobile UC</h5></div>
+				     		<div class="urun-aciklama-altcizgi"></div>
+				     			<div class="buton"><i class="fas fa-shopping-cart"></i><label>75.00₺</label></div></a>
+							</div>
+
+
+				<a href="#"><div class="item"><img src="resimler/populerurunler/8100pubgmobileuc.webp">
+		     			<div class="urunaciklama"><h5>8100 PUBG Mobile UC</h5></div>
+				     		<div class="urun-aciklama-altcizgi"></div>
+				     			<div class="buton"><i class="fas fa-shopping-cart"></i><label>75.00₺</label></div></a>
+							</div>
+
+
+				<a href="#"><div class="item"><img src="resimler/populerurunler/knightonline400cash.webp">
+		     			<div class="urunaciklama"><h5>Knight Online 400 Cash</h5></div>
+				     		<div class="urun-aciklama-altcizgi"></div>
+				     			<div class="buton"><i class="fas fa-shopping-cart"></i><label>75.00₺</label></div></a>
+							</div>
+
+
+				<a href="#"><div class="item"><img src="resimler/populerurunler/knightonline800cash.webp">
+		     			<div class="urunaciklama"><h5>Knight Online 800 Cash</h5></div>
+				     		<div class="urun-aciklama-altcizgi"></div>
+				     			<div class="buton"><i class="fas fa-shopping-cart"></i><label>75.00₺</label></div></a>
+							</div>
+
+
+				<a href="#"><div class="item"><img src="resimler/populerurunler/knightonline3200cash.webp">
+		     			<div class="urunaciklama"><h5>Knight Online 3200 Cash</h5></div>
+				     		<div class="urun-aciklama-altcizgi"></div>
+				     			<div class="buton"><i class="fas fa-shopping-cart"></i><label>75.00₺</label></div></a>
+							</div>
+
+				<a href="#"><div class="item"><img src="resimler/populerurunler/knightonlinealtargb.webp">
+		     			<div class="urunaciklama"><h5>Knight Online Altar GB</h5></div>
+				     		<div class="urun-aciklama-altcizgi"></div>
+				     			<div class="buton"><i class="fas fa-shopping-cart"></i><label>75.00₺</label></div></a>
+							</div>
+
+
+				<a href="#"><div class="item"><img src="resimler/populerurunler/knightonlinegoldpremium.webp">
+		     			<div class="urunaciklama"><h5>Knight Online Gold Premium</h5></div>
+				     		<div class="urun-aciklama-altcizgi"></div>
+				     			<div class="buton"><i class="fas fa-shopping-cart"></i><label>75.00₺</label></div></a>
+							</div>
+
+
+				<a href="#"><div class="item"><img src="resimler/populerurunler/knightonlinesiriusgb.webp">
+		     			<div class="urunaciklama"><h5>Knight Online Sirius GB</h5></div>
+				     		<div class="urun-aciklama-altcizgi"></div>
+				     			<div class="buton"><i class="fas fa-shopping-cart"></i><label>75.00₺</label></div></a>
+							</div>
+
+				<a href="#"><div class="item"><img src="resimler/populerurunler/leagueoflegends840riotpin.jpeg">
+		     			<div class="urunaciklama"><h5>League of Legends 840 Riot Pin</h5></div>
+				     		<div class="urun-aciklama-altcizgi"></div>
+				     			<div class="buton"><i class="fas fa-shopping-cart"></i><label>75.00₺</label></div></a>
+							</div>
+
+				<a href="#"><div class="item"><img src="resimler/populerurunler/leagueoflegends1780riotpin.jpeg">
+		     			<div class="urunaciklama"><h5>League of Legends 1780 Riot Pin</h5></div>
+				     		<div class="urun-aciklama-altcizgi"></div>
+				     			<div class="buton"><i class="fas fa-shopping-cart"></i><label>75.00₺</label></div></a>
+							</div>
+
+
+				<a href="#"><div class="item"><img src="resimler/populerurunler/valorantpoints1250vp.webp">
+		     			<div class="urunaciklama"><h5>Valorant Points 1250 VP</h5></div>
+				     		<div class="urun-aciklama-altcizgi"></div>
+				     			<div class="buton"><i class="fas fa-shopping-cart"></i><label>75.00₺</label></div></a>
+							</div>
+
+				<a href="#"><div class="item"><img src="resimler/populerurunler/valorantpoints2500vp.webp">
+		     			<div class="urunaciklama"><h5>Valorant Points 2500 VP</h5></div>
+				     		<div class="urun-aciklama-altcizgi"></div>
+				     			<div class="buton"><i class="fas fa-shopping-cart"></i><label>75.00₺</label></div></a>
+							</div>
+
+
+				<a href="#"><div class="item"><img src="resimler/populerurunler/valorantpoints4400vp.webp">
+		     			<div class="urunaciklama"><h5>Valorant Points 4400 VP</h5></div>
+				     		<div class="urun-aciklama-altcizgi"></div>
+				     			<div class="buton"><i class="fas fa-shopping-cart"></i><label>75.00₺</label></div></a>
+							</div>
+
+
+				<a href="#"><div class="item"><img src="resimler/populerurunler/destekle.jpg">
+		     			<div class="urunaciklama"><h5>Destekle</h5></div>
+				     		<div class="urun-aciklama-altcizgi"></div>
+				     			<div class="buton"><i class="fas fa-shopping-cart"></i><label>75.00₺</label></div></a>
+							</div>
+
+
+				<a href="#"><div class="item"><img src="resimler/populerurunler/twitch1ayliknormalabonelik.jpg">
+		     			<div class="urunaciklama"><h5>Twtich 1 Aylık Normal Abonelik</h5></div>
+				     		<div class="urun-aciklama-altcizgi"></div>
+				     			<div class="buton"><i class="fas fa-shopping-cart"></i><label>75.00₺</label></div></a>
+							</div>
+		 	</div>
+		</div>
+	</div>
+
+	<div class="enPopulerOyunlar">
+		<div class="enPopulerOyunlar-baslik">
+					<h1>EN POPÜLER OYUNLAR</h1>
+		</div>		
+			<div class="container">	
+				<div class="oyun-bilgileri">			
+					<div class="oyun-fotografi">
+						<a href="#"><img src="resimler/enpopuleroyunlar/knight.jpg"><div class="resim-ustu-yazi"><h1>İLAN EKLE YA DA SATIN AL</h1><p>SATIN AL</p></div></a>				
+					</div>
+
+					<div class="oyun-fotografi">
+							<a href="#"><img src="resimler/enpopuleroyunlar/valorantjpg.jpg"><div class="resim-ustu-yazi"><h1>REKABETTE</h1><p>YERİNİ AL</p></div></a>
+					</div>
+
+					<div class="oyun-fotografi">
+							<a href="#"><img src="resimler/enpopuleroyunlar/league_of_legends.jpg"><div class="resim-ustu-yazi"><h1>EFSANELER LİGİ'NDE</h1><p>FARK YARAT</p></div></a>
+					</div>
+
+					<div class="oyun-fotografi">
+							<a href="#"><img src="resimler/enpopuleroyunlar/black_desert.jpg"><div class="resim-ustu-yazi"><h1>BLACK DESERT</h1><p>GÜCÜNE GÜÇ KAT</p></div></a>
+					</div>
+
+					<div class="oyun-fotografi">
+							<a href="#"><img src="resimler/enpopuleroyunlar/csgo.jpg"><div class="resim-ustu-yazi"><h1>HIZLI TESLİMAT</h1><p>BEKLEMEK YOK</p></div></a>
+					</div>
+
+					<div class="oyun-fotografi">
+							<a href="#"><img src="resimler/enpopuleroyunlar/silkroad.jpg"><div class="resim-ustu-yazi"><h1>SILKROAD TÜRKİYE</h1><p>HIZLI TESLİMAT</p></div></a>
+					</div>
+
+					<div class="oyun-fotografi">
+							<a href="#"><img src="resimler/enpopuleroyunlar/zula.jpg"><div class="resim-ustu-yazi"><h1>REKABETTE</h1><p>YERİNİ AL</p></div></a>
+					</div>
+
+					<div class="oyun-fotografi">
+							<a href="#"><img src="resimler/enpopuleroyunlar/pubg_mobile.jpg"><div class="resim-ustu-yazi"><h1>PUBG MOBILE UC</h1><p>UNKNOWN CASH</p></div></a>
+					</div>
+				</div>
+			</div>
+
+	<div class="haberler-ust">
+		<div class="haberler-baslik">
+			<h1>HABERLER</h1>
+		</div>
+		<div class="haberler-yazisi">
+			<p>ByNoGame'e özel haberleri takip et.</p>
+		</div>
+		</div>
+			<div class="container">
+				<div class="haberlerSlider owl-carousel">	      
+
+				    <div class="itemhaberler"> <a href="#"><img src="resimler/haberler/apexpubg.webp"><div class="haberbasligi"><h5>Apex Legends vs PUBG</h5></div></a><div class="zaman"><label>04/09/2021 16:35:00</label></div></div>	      
+
+				    <div class="itemhaberler"> <a href="#"><img src="resimler/haberler/dikkatcekenoyun.webp"><div class="haberbasligi"><h5>Steam'de dikkat çeken oyun indirimleri</h5></div></a><div class="zaman"><label>13/09/2021 10:25:00</label></div></div>	      
+
+				    <div class="itemhaberler"> <a href="#"><img src="resimler/haberler/gizemlipaylasim.webp"> <div class="haberbasligi"><h5>Vlorant'ın Gizemli Paylaşımı olası bir ajan ve...</h5></div></a><div class="zaman"><label>04/09/2021 22:00:00</label></div></div>	     
+
+				    <div class="itemhaberler"> <a href="#"><img src="resimler/haberler/haftaninoyunhaberleri.jpg"><div class="haberbasligi"><h5>ByNoGame ile haftanın oyun haberleri</h5></div></a><div class="zaman"><label>12/09/2021 20:38:00</label></div></div>	      
+
+				    <div class="itemhaberler"> <a href="#"><img src="resimler/haberler/jumpthrowkodu.webp"><div class="haberbasligi"><h5>CS:GO Jump Throw Kodu</h5></div></a><div class="zaman"><label>07/09/2021 04:54:00</label></div></div>	    
+
+				    <div class="itemhaberler"> <a href="#"><img src="resimler/haberler/oyunfestivali.webp"><div class="haberbasligi"><h5>Avrupa ve Ortadoğu'nun İlk oyun festivali düzenleniyor</h5></div></a><div class="zaman"><label>04/09/2021 22:00:00</label></div></div>	      
+
+				    <div class="itemhaberler"> <a href="#"><img src="resimler/haberler/oyuntasimaislemi.webp"><div class="haberbasligi"><h5>Steam'de oyun taşıma işlemi</h5></div></a><div class="zaman"><label>09/09/2021 17:52:00</label></div></div>	     
+
+				    <div class="itemhaberler"> <a href="#"><img src="resimler/haberler/taarruztufekleri.webp"><div class="haberbasligi"><h5>PUBG Taarruz Tüfekleri Hasar Kablosu</h5></div></a><div class="zaman"><label>13/09/2021 13:36:00</label></div></div>	  
+
+				    <div class="itemhaberler"> <a href="#"><img src="resimler/haberler/unlost.webp"><div class="haberbasligi"><h5>Twitch Yayıcılarını yakından tanıyalım: Unlost</h5></div></a><div class="zaman"><label>06/09/2021 14:54:00</label></div></div>	 
+				</div>
+ 			</div>
+ 					 <a href="#"><div class="tumunu-gor-buton">TÜMÜNÜ GÖR</div></a>
+</div>	
+</div>
+</div>
+
+	<div class="footer1">
+		<div class="container">
+	  		<div class="sira">
+				<div class="footer1-baslik">
+					<h2>BYNOGAME</h2>
+				</div>
+					<div class="liste1">
+						<ul>
+							<li><a href="#">Hakkımızda</a></li>
+							<li><a href="#">Etkinlikler</a></li>
+							<li><a href="#">Kariyer</a></li>
+							<li><a href="#">Sponsorluklar</a></li>
+							<li><a href="#">Logolar</a></li>
+						</ul>
+					</div>
+			</div>
+
+			<div class="sira">
+				<div class="footer1-baslik">
+					<h2>ALIŞVERİŞ</h2>
+			</div>
+					<div class="liste1">
+						<ul>
+							<li><a href="#">Ödeme Seçenekleri</a></li>
+							<li><a href="#">Banka Hesap Numaralarımız</a></li>
+							<li><a href="#">Ödeme Yap(tım)</a></li>
+							<li><a href="#">Bağış(Donate)</a></li>
+							<li><a href="#">Hollyhood</a></li>
+						</ul>
+					</div>
+			</div>
+
+			<div class="sira">
+				<div class="footer1-baslik">
+					<h2>ÜYELİK</h2>
+			</div>
+					<div class="liste1">
+						<ul>
+							<li><a href="#">Kullanıcı Adı/Şifremi Unuttum</a></li>
+							<li><a href="#">Bilgilerim</a></li>
+							<li><a href="#">Destek Taleplerim</a></li>
+							<li><a href="#">Siparişlerim</a></li>
+							<li><a href="#">Hesap Silme</a></li>
+						</ul>
+					</div>
+			</div>
+
+			<div class="sira">
+				<div class="footer1-baslik">
+					<h2>YARDIM</h2>
+				</div>
+					<div class="liste1">
+						<ul>
+							<li><a href="#">Yardım Merkezi</a></li>
+							<li><a href="#">İletişim</a></li>					
+						</ul>
+					</div>
+		   </div>
+		</div>
+	</div>
+
+	<div class="footer2">
+		<div class="container">
+			<div class="alt-ikonlar">
+				<a href="#"><div class="ikon"><i class="fab fa-instagram"></i></div></a>
+				<a href="#"><div class="ikon"><i class="fab fa-facebook"></i></div></a>
+				<a href="#"><div class="ikon"><i class="fab fa-twitch"></i></div></a>
+				<a href="#"><div class="ikon"><i class="fab fa-youtube"></i></div></a>
+				<a href="#"><div class="ikon"><i class="fab fa-twitter"></i></div></a>
+				<a href="#"><div class="ikon"><i class="fab fa-linkedin-in"></i></div></a>
+				<a href="#"><div class="ikon"><i class="fab fa-pinterest"></i></div></a>
+				<a href="#" style="background-color: #c9c9c9;"><div class="ikon"><img src="resimler/dmcaa.png" style="width: 70px; height: 30px; margin-top: -5px;"></div></a>				
+			</div>
+		</div>	
+	</div>
+
+	<div class="footer3">
+		<div class="container">
+		  <div class="footer3-flex">
+			<div class="bynogamelogo">
+				<a href="#"><img src="resimler/bynogamelogo.png"></a>
+			</div>
+		<div class="iletisim">
+			<div class="iletisim-bilgileri"><p>ByNoGame Bilişim LTD. <br> Bilgi: info@bynogame.com - Yardım: destek2@bynogame.com <br> Tel: 09.00-18.00 / 0850 600 0030</p></div>
+				<div class="teknik-yardim-liste">
+					<ul>
+						<li><a href="#">Gizlilik</a></li>
+						<li><a href="#">Üyelik ve Hizmet Alım</a></li>
+						<li><a href="#">Hizmet Alım Satım</a></li>
+						<li><a href="#">Aydınlatma</a></li>					
+					</ul>
+				</div>			
+		</div>
+
+			<div class="odeme-yontemleri">
+				<ul>
+					<li><a href="#"><img src="resimler/secure.png"></a></li>
+					<li><a href="#"><img src="resimler/visakart.png"></a></li>
+					<li><a href="#"><img src="resimler/mkart.png"></a></li>
+					<li><a href="#"><img src="resimler/troy2.png"></a></li>
+				</ul>
+			</div>
+			</div>
+		</div>
+	</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+      $('.home-slider').owlCarousel({
+      	items:1,
+      	loop:true,
+      	autoWidth:true,
+      	autoplay:true,
+      	center: true,
+      	mouseDrag:false,
+      	nav:true,
+      	rewind:true,
+      	autoplayHoverPause:true
+      });	      
+    }); 
+
+     $(document).ready(function(){
+      $('.home-slider2').owlCarousel({
+      	items:5,
+      	loop:true,
+      	autoWidth:true,
+      	autoplay:true,
+      	center: true,
+      	mouseDrag:false,
+      	rewind:true,
+      	nav:true,
+      	autoplayHoverPause:true,
+      	autoplayTimeout: 2500
+      });	      
+    }); 
+
+      $(document).ready(function(){
+      $('.haberlerSlider').owlCarousel({
+      	items:5,
+      	loop:true,
+      	autoWidth:true,
+      	autoplay:true,
+      	center: true,
+      	mouseDrag:false,
+      	rewind:true,
+      	nav:true,
+      	autoplayHoverPause:true,
+      	autoplayTimeout: 2500
+      });	      
+    }); 
+	</script>
+	
+</body>
+</html>
