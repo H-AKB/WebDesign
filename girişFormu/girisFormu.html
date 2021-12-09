@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Sitemize kayıt olup, giriş yaparak devam edin">
+	<meta name="keywords" content="giris, kayit, form">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Responsive Giriş Formu</title>
+
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+
+		input:hover, input:focus, .buton:hover{
+			outline: 1px solid gray;
+		}
+
+		.cerceve{
+			height: 0.25%;
+			width: 30%;
+			background-color: rgb(245 245 245);
+			margin: 50px auto;
+			border-radius: 20px;
+		}
+
+		.input-group{
+			margin-left: 20px;
+		}
+
+		.baslik h2{
+			text-align: center;
+			padding-top: 30px;
+			color: rgb(93 71 139);
+			font-family: georgia;
+		}
+
+		.iconSize img{
+			width: 32px;
+			height: 30px;
+			padding: 4px;
+			background-color: lightgray;
+			border-radius: 2px;
+			border: 1px solid darkgray;
+		}
+
+		.total-grup{
+			padding-top: 100px;
+		}
+
+		.nameGroup{
+			display: inline-flex;
+			align-content: center;
+			justify-content: center;
+			margin: 10px 50px;	
+		}
+
+		.nameInput input{
+			width: 400px;
+			height: 30px;
+			border: 1px solid darkgray;
+			caret-color: rgb(93 71 139);
+			font-size: 17px;
+		}
+
+		.mailInput{
+			display: inline-flex;
+		}
+
+		.check{
+			margin: 10px 50px;	
+			font-family: georgia;
+		}
+
+		.buton{
+			margin-top: 35px;
+			margin-left: 50px;
+			border: 1px solid darkgray;
+			padding: 10px;
+			text-align: center;	
+			font-size: 18px;
+			width: 430px;			
+		}	
+
+		.buton a{
+			text-decoration: none;
+			color: rgb(95 95 95);
+			font-family: georgia;
+		}	
+
+		.nameInput input:focus{
+			background-color: rgb(221 221 221);
+		}
+
+		.buton:hover{
+			box-shadow: 0.5px 0.5px 2px 2px rgb(93 71 139);
+		}
+
+		@media screen and (min-width:500px) and (max-width:600px) {
+			*{
+				container: 100%;
+			}
+
+			.cerceve{
+				width: 100%;
+				height: auto;
+				background-color: #dcedde;
+			}
+
+			.nameInput input{
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border: 0;
+				outline: 0;
+			}
+
+			.nameGroup, .check{
+				display: flex;
+				justify-content: center;
+			}	
+
+			.iconSize img{
+				background-color: white;
+				border: 0;
+				outline: 0;
+			}		
+
+			.buton{
+				width: 30%;
+				padding: 5px;
+				margin: 20px auto;
+			}
+
+			.buton:hover{
+				box-shadow: 0 0 0 0;
+				background-color: #ddd;
+				cursor: pointer;
+			}
+
+			.nameInput input:focus{
+				background-color: rgb(245 245 245);
+			}
+
+			.baslik h2{
+				color: darkgreen;
+				font-size: 34px;
+			}
+		}
+
+		@media screen and (min-width:320px) and (max-width:499px) {
+
+			.container{
+				width: 100%;
+			}
+
+			.cerceve{
+				width: 100%;
+				height: auto;
+				background-color: lightblue;
+			}
+
+			.input-group input{				
+				border-radius: 5px;				
+			}
+
+			.nameInput input{
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 15px;
+				caret-color: darkblue;
+			}
+
+			.nameGroup, .check{
+				display: flex;
+				justify-content: center;
+			}
+
+			.check{
+				margin: 10px auto;
+				width: 100%;
+			}
+
+			.iconSize{
+				display: none;
+			}
+			
+			.buton{
+				width: 30%;
+				padding: 5px;
+				margin: 20px auto;
+			}
+
+			.buton:hover{
+				box-shadow: 0 0 0 0;
+				background-color: #eaeaea;
+				cursor: pointer;
+			}
+
+			.nameInput input:focus{
+				background-color: rgb(245 245 245);
+			}
+
+			.baslik h2{
+				color: darkblue;
+				font-size: 30px;
+			}
+		}
+
+		@media (min-width:601px){
+
+			.container{
+				width: 100%;
+			}
+
+			.cerceve{
+				width: 100%;
+				height: auto;
+				background-color: rgb(245 245 245);
+			}
+
+			.nameGroup input{
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 15px;
+				caret-color: darkblue;
+			}
+
+			.nameGroup, .check{
+				display: flex;
+				justify-content: center;
+			}
+
+			.check{
+				margin: 10px auto;
+				width: 100%;
+			}
+			
+			.buton{
+				width: 30%;
+				padding: 5px;
+				margin: 20px auto;
+			}
+
+			.buton:hover{
+				box-shadow: 0 0 0 0;
+				background-color: #eaeaea;
+				cursor: pointer;
+			}
+
+			.nameInput input:focus{
+				background-color: rgb(245 245 245);
+			}
+
+			.baslik h2{
+				color: darkblue;
+				font-size: 40px;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="cerceve">
+		<div class="baslik">
+			<h2>GİRİŞ YAP</h2>
+		</div>
+
+		<div class="total-group">
+			<div class="input-group">
+				<div class="nameGroup">
+					<div class="iconSize">
+						<img src="resimler/user.png">
+					</div>
+						<div class="nameInput">
+							<input type="text" name="name" placeholder="İsminiz" required="">
+						</div>
+				</div>
+
+				<div class="nameGroup">
+					<div class="iconSize">
+						<img src="resimler/email.png">
+					</div>
+						<div class="nameInput">
+							<input type="email" name="email" placeholder="Mail adresiniz" required="">
+						</div>
+				</div>
+
+				<div class="nameGroup">
+					<div class="iconSize">
+						<img src="resimler/lock.png">
+					</div>
+						<div class="nameInput">
+							<input type="password" name="pw" required="" placeholder="Şifreniz">
+						</div>
+				</div>
+
+				<div class="check">
+				    <label id="checkboxValue"> <input id="checkbox" type="checkbox" name="remember">Remember</label>	
+				</div>	
+
+				<div class="buton"><a href="#">GİRİŞ</a></div><br>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
