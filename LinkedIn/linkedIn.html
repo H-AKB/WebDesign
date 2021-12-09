@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="750 milyon+ üye | Profesyonel kimliğinizi yönetin. Profesyonel ağınızı kurun ve ağınızla 				bağlantıya geçin. Bilgi birikimlerine, içgörülere ve fırsatlara ...">
+    <meta name="keywords" content="Oturum, üyelik, linkedin, iş, profesyonel,ağ, bilgi, kariyer">
+    <title>LinkedIn: Oturum Açın veya Üye Olun</title>
+
+    <style>
+    	*{
+    		box-sizing: border-box;
+    	}
+
+    	body{
+   	 	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue","Fira Sans",Ubuntu,Oxygen,"Oxygen Sans",Cantarell,"Droid Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Emoji","Segoe UI Symbol","Lucida Grande",Helvetica,Arial,sans-serif;
+    	}
+
+    	.container{
+    		width: 1200px;
+    		margin: 0 auto;
+    	}
+
+    	.container2{
+    		width: 1200px;
+    		margin: 0 auto;
+    		display: flex;
+			justify-content: space-between;		
+    	}
+
+    	.header{
+    		width: 100%;
+    		height: 80px;
+    		display: flex;
+    		justify-content: space-between;
+    		text-align: center;
+    		align-items: center;
+    	}
+
+    	.logo img{
+    		width: 160px;
+    		height: 90px;    		
+    	}
+
+    	.headerbutonlar{
+    		display: flex;    	
+    	}
+
+    	.oturumac, .hemenkatil{
+    		width: 150px;
+    		background-color: transparent;
+			border: 1px solid #3173c4;
+			padding: 10px;
+			border-radius: 20px;
+    	}
+
+    	.hemenkatil{
+    		width: 120px;
+    		border-color: white;
+    		border-radius: 5px;
+    		margin-right: 15px;
+    	}
+
+    	.hemenkatil a, .oturumac a{
+    		color: black;
+    		text-decoration: none;
+    		font-size: 17px;
+    	}
+
+    	.hemenkatil a{
+    		color: gray;
+    	}
+
+    	.oturumac a{
+    		color: #3173c4;
+    	}
+
+    	.hemenkatil:hover{
+    		background-color: #EBEBEB;
+    	}
+
+    	.oturumac:hover{
+    		border: 2px solid #3173c4;
+    		background-color: #EAF4FE; 
+    	} 	
+
+    	.solkisim{
+    		display: block;
+    	}
+
+    	.solkisimbaslik p{
+    		font-size: 40px;
+    		color: #AF887E;
+    	}
+
+    	.buton1,.buton2,.buton3{
+    		width: 380px;
+    		padding: 20px;
+    		background-color: transparent;
+			border: 1px solid #efefef;
+			border-radius: 8px;
+			margin-top: 15px;
+    	}
+
+		.buton1 a, .buton2 a, .buton3 a{
+			font-size: 20px;
+			text-decoration: none;
+			color: black;
+			opacity: 0.8;
+		}    	
+
+		.solkisimbaslik p{
+			font-size: 50px;
+			width: 35%;
+			font-weight: 200;
+		}		
+
+		.sagkisim .image{
+			width: 750px;
+		    height: 600px;
+		    position: absolute;
+		    top: 110px;
+		    right: 210px;
+		}
+
+		.buton1:hover , .buton2:hover, .buton3:hover{			
+			box-shadow: 3px 3px 5px rgb(207 207 207);
+		}
+
+		.article2{
+			background-color: #FAF9F7;
+			height: 500px;
+			margin-top: 45px;
+			display: flex;
+			justify-content: space-between;	
+			align-items: center;
+		}
+
+		.article2baslik{
+			width:60%;
+			height: 50px;
+			font-size: 50px;
+			font-weight: 100;
+			opacity: 0.8;
+		}
+
+		.onerilenaramalar ul{
+			display: flex;
+			flex-wrap: wrap;
+			list-style: none;
+			justify-content: left;	
+			margin:  0;
+			padding: 0;
+		}
+
+		.onerilenaramalar ul li{
+			margin-top: 50px;
+		}
+
+		.onerilenaramalar ul li a {
+			text-decoration: none;
+			font-size: 20px;
+			color: rgb(105 105 105);
+			background-color:#EBEBEB;
+			margin: 3px;
+			padding: 20px;
+			border-radius: 40px;
+			font-weight: 600;
+		}
+		
+		.onerilenaramalar ul li a:hover {
+			text-decoration: underline;
+			background-color: rgb(193 205 193);
+			opacity: 0.7;
+		}
+
+		.onerilenaramabaslik{
+			display: block;
+		}
+
+		.article3{
+			display: flex;
+			align-items: center;
+			background-color: #F1ECE5;
+			height: 270px;
+		}
+
+		.article3baslik{
+			width: 40%;
+			float: left;
+			font-size: 22px;
+			color: #B24020;
+			letter-spacing: 1px;			
+		}
+
+		.article3baslik h1{
+			font-weight: 500;
+		}
+
+		.article3buton label{
+			width: 180px;
+			border-radius: 30px;
+			background-color: transparent;
+			border: 1px solid #545250;
+			float: left;
+			text-align: center;
+			align-items: center;
+			font-size: 20px;
+			padding: 15px;
+			margin: 80px 50px;
+		}
+
+		.article3buton label a{
+			text-decoration: none;
+			color: #545250;
+		}
+
+		.article3buton label:hover{
+			background-color:#C1BDB7 ;
+			text-decoration: underline;
+		}
+
+		.buton1 img, .buton2 img, .buton3 img{
+			width: 15px;
+			height: 20px;
+			float: right;
+			padding-top: 5px;
+		}
+
+		.article2sag{
+			display: block;			
+		}
+
+		.article2 .container2 > div {
+			margin:  0 20px;
+			min-width:  40%
+		}
+
+		.onerilenaramabasligi{
+			padding: 0 10px;
+			font-size: 17px;
+			color: #545250;
+			font-weight: 500;
+		}
+
+		.dahafazlagoster{
+			padding: 30px 15px;
+		}
+
+		.dahafazlagoster a{
+			text-decoration: none;
+			color: black;
+		}
+
+		.dahafazlagoster a:hover{
+			text-decoration: underline;
+		}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    	<div class="header">
+    		<div class="logo">
+    			<img src="resimler/linkedin.png"></div>
+    			<div class="headerbutonlar">
+    				<div class="hemenkatil"><a href="#">Hemen Katıl</a></div> 				
+    				<div class="oturumac"><a href="#">Oturum Aç</a></div>	    				
+    			</div>		    		
+    	</div>
+
+    	<div class="article">
+    		<div class="solkisim">
+    			<div class="solkisimbaslik">
+    				<p>Profesyonel topluluğunuza hoş geldiniz!</p></div>
+
+	<div class="solkisimbutonlar">
+		<div class="buton1 ok"><a href="#">İş ilanı arayın</a><img src="resimler/right-arrow.png"></div>
+		<div class="buton2 ok"><a href="#">Tanıdığınız bir kişiyi bulun</a><img src="resimler/right-arrow.png"></div>
+		<div class="buton3 ok"><a href="#">Yeni bir yetenek öğrenme</a><img src="resimler/right-arrow.png"></div>		
+	</div>    			
+    		</div>
+
+    		<div class="sagkisim">
+    			<img class="image" src="resimler/a.png">
+    		</div>
+    	</div>
+    </div>
+
+    <div class="article2">
+    	<div class="container2">
+    	<div class="article2baslik">
+    		 <div class="kutuOrnegi1">
+    		 	<p>Sizin için uygun olan işi veya stajı bulun</p></div> 
+    		 </div>
+    		 <div class="kutuOrnegi2">
+    		 	<div class="onerilenaramabasligi">ÖNERİLEN ARAMALAR</div>
+			    	<div class="onerilenaramalar">    		
+			    		<ul>
+			    			<li><a href="#">Mühendislik</a></li>
+			    			<li><a href="#">İş Geliştirme</a></li>
+			    			<li><a href="#">Finans</a></li>
+			    			<li><a href="#">Yönetici Asistanı</a></li>
+			    			<li><a href="#">Perakende Uzmanı</a></li>
+			    			<li><a href="#">Müşteri Hizmetleri</a></li>
+			    			<li><a href="#">Operasyon</a></li>
+			    			<li><a href="#">Bilgi Teknolojisi</a></li>
+			    			<li><a href="#">Pazarlama</a></li>
+			    			<li><a href="#">İnsan Kaynakları</a></li>    			
+			    		</ul>
+
+			    		<div class="dahafazlagoster"><a href="#">
+			    			daha fazla göster</a>
+			    		</div>
+			    	</div>
+			    	
+    	 		</div> 
+    	 	</div>
+    		</div> 	  	
+  	
+
+    <div class="article3">
+    	<div class="container">    	
+    		<div class="article3baslik"><h1>Milyonlarca kişinin iş ilanınızı görmesi için işinizi yayınlayın</h1></div>
+    		<div class="article3buton"><label><a href="#">İş ilanı yayınla</a></label></div>    			
+    	</div>
+    </div>    	
+</body>
+</html>
