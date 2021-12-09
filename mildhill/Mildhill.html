@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>MILDHILL</title>
+	<style>
+		*{
+			box-sizing: border-box;
+			color: white;
+			margin: 0;
+		}
+
+		body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+		.header{
+			width: 100%;
+			background-color: rgb(1,11,102);
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20px;
+			height: 40px;
+		}
+
+		.header-sol label{
+			font-size: 18px;
+			font-weight: bold;
+
+		}		
+
+		.header-sag{
+			display: flex;
+		}
+
+		.header-sag label{
+			font-weight: bold;
+		}
+
+		.group{
+			display: flex;
+			padding:10px 20px;
+		}
+
+		.article1{		
+			height: 500px;
+			background: url(resim/sa.jpg) no-repeat;
+			background-size: cover;
+			padding: 20px;
+		}
+
+		.article1-header{
+			width: 100%;
+			display:inline-flex;
+			justify-content: space-between;
+			margin-top: 25px;
+		}
+
+		.firma-ismi h2{
+			font-size: 40px;
+			color: #FEE8F8;
+		}
+
+		.menu ul{
+			display: flex;
+			list-style: none;
+			padding-top: 15px;
+			align-items: center;
+		}
+
+		.menu ul li a{
+			text-decoration: none;
+			font-weight: bold;
+			font-size: 20px;
+			padding: 20px;
+			transition: 1s all;
+		}
+
+		.article1-body{
+			width: 650px;
+			font-size: 45px;
+			text-align: center;
+			align-items: center;
+			vertical-align: center;
+			margin: 120px;		
+		}
+
+		.img{
+			width: 27px;
+			height: 27px;
+		}
+
+		.article2{
+			display: flex;
+			justify-content: space-evenly;
+			margin-top: 50px;			
+		}
+
+		.ikon-baslik-yazi{
+			display: flex;
+		}
+
+		.article2-resim{
+			width: 80px;
+			height: 80px;
+		}
+
+		.article2-baslik h4{
+			color: #7046FD;
+		}
+
+		.article2-yazi label{
+			color: black;
+		}
+
+		.baslik-yazi{
+			padding:20px 20px;
+		}
+
+		.article-son{
+			display: flex;
+			justify-content: space-evenly;
+	 		flex-wrap: wrap;
+			align-content:flex-start ;
+		}
+
+		.urunlerKapsayici{
+			margin-top: 50px;
+		}
+
+		.urunler-fotograf img{
+			width: 280px;
+			height: 400px;
+			border-radius: 15px;
+		}
+
+		a{
+			text-decoration: none;
+		}
+
+		h2{
+			color: black;
+			text-align: left;
+			font-size: 21px;
+			opacity: 0.6;
+		}
+
+		p, .urun-fiyati, .urun-fiyati label {
+			color:rgb( 54 54 54);
+			text-align: left;
+		}
+
+		.urun-fiyati label{
+			font-size: 20px;
+			color: black;
+		}
+
+		.menu ul li a:hover{
+			color: #FE68A9;
+			font-size: 19px;
+		}
+
+		.menu ul li a img:hover{
+			transform: scale(1.1);
+		}
+
+		.text-group{
+			display: flex;
+		}
+
+		.urun-yildiz{
+			font-size: 15px;
+		}
+
+	</style>
+</head>
+<body>
+		<div class="header">
+			<div class="header-sol">
+					<label><a href="#">Mildhill Web Site</a></label>
+				</div>
+
+			<div class="header-orta">				
+			</div>
+
+			<div class="header-sag">
+				<div class="group">
+					<div class="ikon-tel">
+						<img src="resim/call.png">
+					</div>
+
+					<div class="telno">
+						<label><a href="#">0555 555 55 55</a></label>
+					</div>
+				</div>
+
+				<div class="group">
+					<div class="konum-ikon">
+						<img src="resim/placeholder.png">
+						</div>
+					<div class="konum-isim">
+						<label><a href="#">New York/ABD</a></label>
+						</div>
+				</div>
+
+					<div class="group">
+						<div class="dil-ikon">
+							<img src="resim/language.png">
+						</div>
+						<div class="dil-label">
+							<label><a href="#">English</a></label>
+						</div>
+						</div>
+					</div>
+		</div>
+
+		<div class="article1">
+			<div class="article1-header">
+			<div class="article1-sol">
+				<div class="firma-ismi">
+					<h2><a href="#">MILDHILL★</a></h2>
+				</div>
+			</div>
+
+			<div class="article1-sag">
+				<div class="menu">
+					<ul>
+						<li><a href="#">HOME</a></li>
+						<li><a href="#">PAGES</a></li>
+						<li><a href="#">SHOP</a></li>
+						<li><a href="#">PORTFOLIO</a></li>
+						<li><a href="#">BLOG</a></li>
+						<li><a href="#"><img class="img" src="resim/aaa.png"></a></li>
+						<li><a href="#"><img class="img" src="resim/ssss.png" style="width: 45px; height: 30px;"></a></li>
+						<li><a href="#"><img class="img" src="resim/mmm.png"></a></li>
+						
+					</ul>
+				</div>
+			</div>
+			</div>
+
+			<div class="article1-body">
+			<div class="article1-orta">
+				<h1>Sale Up to 70% Free Shipping</h1>
+			</div>  
+		</div>
+		</div>
+
+		<div class="article2">
+			<div class="ikon-baslik-yazi">
+				<div class="ikon">
+					<img class="article2-resim" src="resim/kargo.png">
+				</div>
+				<div class="baslik-yazi">
+				<div class="article2-baslik">
+					<h4>hkgklg</h4>
+				</div>
+				<div class="article2-yazi">
+					<label>gfklgkfl</label>
+				</div>
+				</div>
+			</div>
+
+
+			<div class="ikon-baslik-yazi">
+				<div class="ikon">
+					<img class="article2-resim" src="resim/box.png">
+				</div>
+				<div class="baslik-yazi">
+				<div class="article2-baslik">
+					<h4>Great Value</h4>
+				</div>
+				<div class="article2-yazi">
+					<label>gfklgkfl</label>
+				</div>
+				</div>
+			</div>
+
+
+			<div class="ikon-baslik-yazi">
+				<div class="ikon">
+					<img class="article2-resim" src="resim/pay.png">
+				</div>
+				<div class="baslik-yazi">
+				<div class="article2-baslik">
+					<h4>Easy Pay</h4>
+				</div>
+				<div class="article2-yazi">
+					<label>gfklgkfl</label>
+				</div>
+				</div>
+			</div>
+
+			<div class="ikon-baslik-yazi">
+				<div class="ikon">
+					<img class="article2-resim" src="resim/telefon.png">
+				</div>
+				<div class="baslik-yazi">
+				<div class="article2-baslik">
+					<h4>Online Shop</h4>
+				</div>
+				<div class="article2-yazi">
+					<label>gfklgkfl</label>
+				</div>
+				</div>
+			</div>
+
+
+			<div class="ikon-baslik-yazi">
+				<div class="ikon">
+					<img class="article2-resim" src="resim/security.png">
+				</div>
+				<div class="baslik-yazi">
+				<div class="article2-baslik">
+					<h4>Security</h4>
+				</div>
+				<div class="article2-yazi">
+					<label>gfklgkfl</label>
+				</div>
+				</div>
+			</div>
+		</div>
+
+<div class="article-son">
+
+		<div class="urunlerKapsayici">
+			<div class="urunler-fotograf">
+				<img src="resim/g2.jpg">
+			</div>
+
+			<div class="urun-ismi">
+				<h2>Tişört</h2>
+			</div>
+
+			<div class="urun-aciklamasi">
+				<p>Penye</p>
+			</div>
+
+			<div class="urun-yildiz">
+				<p>☆☆☆☆☆  (22)</p>
+			</div>
+
+			<div class="urun-fiyati">
+				<label>70₺</label>
+			</div>			
+		</div>
+
+
+		<div class="urunlerKapsayici">
+			<div class="urunler-fotograf">
+				<img src="resim/g3.jpg">
+			</div>
+
+			<div class="urun-ismi">
+				<h2>Tişört</h2>
+			</div>
+
+			<div class="urun-aciklamasi">
+				<p>Pamuk</p>
+			</div>
+
+			<div class="urun-yildiz">
+				<p>☆☆☆☆☆  (19)</p>
+			</div>			
+
+			<div class="urun-fiyati">
+				<label>70₺</label>
+			</div>			
+		</div>
+
+
+		<div class="urunlerKapsayici">
+			<div class="urunler-fotograf">
+				<img src="resim/g4.jpg">
+			</div>
+
+			<div class="urun-ismi">
+				<h2>Tişört</h2>
+			</div>
+
+			<div class="urun-aciklamasi">
+				<p>Pamuk</p>
+			</div>
+
+			<div class="urun-yildiz">
+				<p>☆☆☆☆☆  (5)</p>
+			</div>			
+
+			<div class="urun-fiyati">
+				<label>70₺</label>
+			</div>			
+		</div>
+
+
+		<div class="urunlerKapsayici">
+			<div class="urunler-fotograf">
+				<img src="resim/g5.jpg">
+			</div>
+
+			<div class="urun-ismi">
+				<h2>Tişört</h2>
+			</div>
+
+			<div class="urun-aciklamasi">
+				<p>Pamuk</p>
+			</div>
+
+			<div class="urun-yildiz">
+				<p>☆☆☆☆☆  (12)</p>
+			</div>			
+
+			<div class="urun-fiyati">
+				<label>70₺</label>
+			</div>			
+		</div>
+
+
+		<div class="urunlerKapsayici">
+			<div class="urunler-fotograf">
+				<img src="resim/g6.jpg">
+			</div>
+
+			<div class="urun-ismi">
+				<h2>Tişört</h2>
+			</div>
+
+			<div class="urun-aciklamasi">
+				<p>Pamuk</p>
+			</div>
+
+			<div class="urun-yildiz">
+				<p>☆☆☆☆☆  (8)</p>
+			</div>			
+
+			<div class="urun-fiyati">
+				<label>70₺</label>
+			</div>			
+		</div>		
+
+
+		<div class="urunlerKapsayici">
+			<div class="urunler-fotograf">
+				<img src="resim/g7.jpg">
+			</div>
+
+			<div class="urun-ismi">
+				<h2>Tişört</h2>
+			</div>
+
+			<div class="urun-aciklamasi">
+				<p>Pamuk</p>
+			</div>
+
+			<div class="urun-yildiz">
+				<p>☆☆☆☆☆  (8)</p>
+			</div>			
+
+			<div class="urun-fiyati">
+				<label>70₺</label>
+			</div>			
+		</div>		
+
+
+
+		<div class="urunlerKapsayici">
+			<div class="urunler-fotograf">
+				<img src="resim/g8.jpg">
+			</div>
+
+			<div class="urun-ismi">
+				<h2>Tişört</h2>
+			</div>
+
+			<div class="urun-aciklamasi">
+				<p>Pamuk</p>
+			</div>
+
+			<div class="urun-yildiz">
+				<p>☆☆☆☆☆  (8)</p>
+			</div>			
+
+			<div class="urun-fiyati">
+				<label>70₺</label>
+			</div>			
+		</div>		
+
+
+		<div class="urunlerKapsayici">
+			<div class="urunler-fotograf">
+				<img src="resim/g9.jpg">
+			</div>
+
+			<div class="urun-ismi">
+				<h2>Tişört</h2>
+			</div>
+
+			<div class="urun-aciklamasi">
+				<p>Pamuk</p>
+			</div>
+
+			<div class="urun-yildiz">
+				<p>☆☆☆☆☆  (8)</p>
+			</div>			
+
+			<div class="urun-fiyati">
+				<label>70₺</label>
+			</div>			
+		</div>		
+
+
+		<div class="urunlerKapsayici">
+			<div class="urunler-fotograf">
+				<img src="resim/g10.jpg">
+			</div>
+
+			<div class="urun-ismi">
+				<h2>Tişört</h2>
+			</div>
+
+			<div class="urun-aciklamasi">
+				<p>Pamuk</p>
+			</div>
+
+			<div class="urun-yildiz">
+				<p>☆☆☆☆☆  (8)</p>
+			</div>			
+
+			<div class="urun-fiyati">
+				<label>70₺</label>
+			</div>			
+		</div>	
+
+		<div class="urunlerKapsayici">
+			<div class="urunler-fotograf">
+				<img src="resim/g11.jpg">
+			</div>
+
+			<div class="urun-ismi">
+				<h2>Tişört</h2>
+			</div>
+
+			<div class="urun-aciklamasi">
+				<p>Pamuk</p>
+			</div>
+
+			<div class="urun-yildiz">
+				<p>☆☆☆☆☆  (8)</p>
+			</div>			
+
+			<div class="urun-fiyati">
+				<label>70₺</label>
+			</div>			
+		</div>		
+
+
+		<div class="urunlerKapsayici">
+			<div class="urunler-fotograf">
+				<img src="resim/g12.jpg">
+			</div>
+
+			<div class="urun-ismi">
+				<h2>Tişört</h2>
+			</div>
+
+			<div class="urun-aciklamasi">
+				<p>Pamuk</p>
+			</div>
+
+			<div class="urun-yildiz">
+				<p>☆☆☆☆☆  (8)</p>
+			</div>			
+
+			<div class="urun-fiyati">
+				<label>70₺</label>
+			</div>			
+		</div>		
+
+
+		<div class="urunlerKapsayici">
+			<div class="urunler-fotograf">
+				<img src="resim/g13.jpg">
+			</div>
+
+			<div class="urun-ismi">
+				<h2>Tişört</h2>
+			</div>
+
+			<div class="urun-aciklamasi">
+				<p>Pamuk</p>
+			</div>
+
+			<div class="urun-yildiz">
+				<p>☆☆☆☆☆  (8)</p>
+			</div>			
+
+			<div class="urun-fiyati">
+				<label>70₺</label>
+			</div>			
+		</div>			
+		</div>
+</body>
+</html>
