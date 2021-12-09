@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style>
+		*{
+			box-sizing: border-box;
+			margin: 20px auto;
+			font-family:'Teko', sans-serif;
+		}
+
+		html,body{
+			background-color: black;
+		}
+
+		.container{
+			width: 1200px;
+		}
+
+		.header{
+			width: 100%;
+			display: block;	
+		}
+
+		.header-baslik{
+			text-align: center;
+			justify-content: center;
+			align-items: center;
+			color: white;
+			font-size: 24px;
+		}
+
+		.header-menu ul{
+			display: flex;
+			list-style: none;
+		}
+
+		.header-menu ul li a{
+			text-decoration: none;
+			color: darkgray;
+			font-size: 24px;
+		}
+
+		.article{
+			display: flex;
+			justify-content: space-evenly;
+			text-align: center;
+			align-items: center;
+			padding: 0 30px 0 30px;
+			margin-top: -15px;
+		}
+
+		.article-image img{
+			width: 300px;
+			height: 250px;
+			border-radius: 150px;
+		}
+
+		.article-baslik{
+			color: white;
+		}
+
+		.resim-aciklama{
+			color: gray;
+			font-size: 20px;
+		}
+
+		.button{
+			width: 120px;
+			padding: 10px;
+			border-radius: 30px;
+			background-color: gray;
+			color: #fff;
+			font-size: 20px;
+		}
+
+		.header-menu ul li a:hover{
+			color: #fff;
+			transition: 0.4s all;
+		}
+
+		.button a{
+			color: white;
+			text-decoration: none;
+		}
+
+		.article-image a:hover{
+			filter: hue-rotate(150deg);			
+		}
+
+		.image2 a:hover{
+			filter: hue-rotate(100deg);
+		}
+
+		.image3 a:hover{
+			filter: sepia(80%);
+		}
+
+		a{
+			text-decoration: none;
+		}
+
+	</style>
+</head>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap');
+</style>
+
+<body>
+	<div class="container">
+		<div class="header">
+			<div class="header-baslik">
+				<h1>Car Site</h1>
+			</div>
+			<div class="header-menu">
+				<ul>
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">SERVICES</a></li>
+					<li><a href="#">GALLERY</a></li>
+					<li><a href="#">ABOUT</a></li>
+					<li><a href="#">CONTACT</a></li>
+					<li><a href="#">BLOG</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="article">
+			 <div class="article-image">
+			 	<a href="#"><img src="resimler/1.jfif"></a>
+			 	<div class="article-baslik">
+			 		<h1>Amazing Speed</h1>
+			 		<div class="resim-aciklama">
+			 			<p>You can create and publish your own website in less than 5 minutes. just create am account, pick a design andenter soem text </p>
+			 			<a href="#"><div class="button">More Info</div></a>
+			 		</div>
+			 	</div>
+			 </div>
+
+			 <div class="article-image image2">
+			 	<a href="#"><img src="resimler/2.jfif"></a>
+			 	<div class="article-baslik">
+			 		<h1>Ease of Use</h1>
+			 		<div class="resim-aciklama">
+			 			<p>Mozello is easy to use for everybody. Even if you have never created websites before, you will be able to create a new website quickly.</p>
+			 			<a href="#"><div class="button">More Info</div></a>
+			 		</div>
+			 	</div>
+			 </div>
+
+
+			 <div class="article-image image3">
+			 	<a href="#"><img src="resimler/3.jfif"></a>
+			 	<div class="article-baslik">
+			 		<h1>Zero cost</h1>
+			 		<div class="resim-aciklama">
+			 			<p>Mozello's self-service web development platform is free of charge. Of course, you can opt-in for a paid package with more features.</p>
+			 			
+			 			<a href="#"><div class="button">More Info</div></a>			 			
+			 		</div>
+			 	</div>
+			 </div>
+		</div>
+
+
+
+	</div>
+</body>
+</html>
