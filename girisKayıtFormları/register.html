@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+		<style>
+			*{
+				box-sizing: border-box;
+				margin: 0 auto;
+				padding: 0;
+				outline: 0;
+				font-family: 'kakikukeko';				
+			}
+
+			.container{
+				width: 400px;
+			}
+
+			.cerceve{
+				width: 100%;
+				height: 600px;
+				margin: 100px auto;
+				background-color: rgb(255 239 219);
+				padding: 10px;
+				outline: 2px ridge black;
+				box-shadow: 15px 15px 5px 5px rgb(255 127 36);
+			}
+
+			.header{
+				padding: 20px;
+				background-color: transparent;
+			}
+
+			.header h2{
+				text-align: center;
+				color: rgb(105 139 105);
+				font-size: 45px;
+			}
+
+			.form-group{
+				margin-top: 20px;
+			}
+
+			legend{
+				padding: 5px;
+				color: rgb(255 127 36);
+				font-size: 19px;
+				font-weight: 100;
+			}
+
+			input{
+				width: 100%;
+				padding: 7px;
+				background-color: transparent;
+				border: none;
+				font-size: 22px;
+				text-align: center;
+			}
+
+			.article{
+				margin-top: -10px;
+			}
+
+			.footer{				
+				margin-top: 30px;
+				display: block;
+			}
+
+			.buton{
+				width: 150px;		
+				background-color: rgb(60 179 113);
+				text-align: center;
+				color: #fff;
+				padding: 10px;
+				border-radius: 15px;
+				font-size: 20px;
+			}
+
+			a{
+				text-decoration: none;
+			}
+
+			a:hover{
+				text-decoration: underline;
+				text-decoration-color: rgb(255 127 36);
+			}
+
+			fieldset{
+				border-color: rgb(105 139 105);
+			}
+		</style>	
+</head>
+<body>
+	<div class="container">
+		<div class="cerceve">
+			<div class="header">
+				<h2>REGISTER</h2>
+			</div>
+
+		<div class="article">
+
+				<div class="form-group">
+				<fieldset>
+					<legend>Full Name</legend><input type="text" name="fullname" required="">
+				</fieldset></div>
+
+				<div class="form-group">
+				<fieldset>
+					<legend>Mail</legend><input type="text" name="mail" required="">
+				</fieldset></div>				
+		</div>
+
+		<div class="form-group">
+				<fieldset>
+					<legend>User Name</legend><input type="text" name="username" required="">
+				</fieldset></div>
+
+		<div class="form-group">
+				<fieldset>
+					<legend>Password</legend><input type="password" name="pw" required="">
+				</fieldset></div>			
+
+			<div class="footer">
+				<a href="#"><div class="buton">GİRİS YAP</div></a>
+			</div>
+
+		</div>
+	</div>
+</div>
+</body>
+</html>
