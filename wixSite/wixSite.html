@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>WIX</title>
+</head>
+	<style>
+		*{
+			box-sizing: border-box;	
+			letter-spacing: 1px;
+			font-style: italic;
+		}
+
+		.header-article{
+			background: url(resimler/urun.jpg) no-repeat;
+			background-size: cover;
+		}
+
+		.header{
+			height: 100px;
+			background-color: black;
+			opacity: 0.8;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.dropdown-group{
+			display: flex;
+		}
+
+		.dropdown{
+			padding: 10px;
+		}
+
+		.dropdown label{
+			text-align: center;
+			vertical-align: center;
+			align-items: center;
+		}
+
+		.dropdown-menu li {
+			margin: 15px;
+		}
+
+		.search{
+			width: 200px;
+			height: 40px;
+			padding: 15px;
+		}
+
+		.search input{
+			background-color: transparent;
+			border: none;
+			outline: 0;
+			border-bottom: 2px solid white;
+			color: white;
+		}
+
+		.user-icon label, .basket-icon label{
+			margin:15px 5px;
+		}
+
+		.article{
+			width: 100%;
+			height: 700px;
+		}
+
+		.article-baslik h1{
+			text-align: center;
+			align-items: center;
+			font-size: 75px;
+		}
+
+		.article-text{
+			text-align: center;
+			font-size: 25px;
+			margin-top: 270px;
+		}
+
+		.shopnow a, .logo a{
+			color: white;
+			text-decoration: none;
+		}
+
+		.logo a:hover, .shopnow a:hover{
+			text-decoration: none;
+			color: white;
+		}
+
+		.article2{			
+			display: flex;
+			width: 100%;
+		}
+
+		.article2-yazi{
+			width: 60%;
+			height: 700px;
+			background-color: black;
+			color: #fff;
+			text-align: center;
+			padding-top: 280px;
+		}
+
+		.article2-resim{
+			width: 50%;
+		}
+
+		.article2-baslik h1{
+			font-size: 45px;
+		}
+
+		.article2-aciklama{
+			font-size: 24px;
+		}
+
+		.article2-aciklama a{
+			text-decoration: none;
+			color: white;
+		}
+
+		.article3{
+			display:inline-flex;
+			width: 100%;		
+		}
+
+		.article3-image{
+			width: 35%;
+		}
+
+		.article3-image img{
+			width: 635px;
+			height: 635px;
+		}
+
+		.user-icon img, .basket-icon img{
+			width: 32px;
+			height: 32px;
+		}
+
+		.user-icon-group, .basket-icon-group{
+			margin-top: 6px;
+		}
+
+		.user-icon, .basket-icon{
+			display: flex;
+		}
+
+		.user-icon label, .basket-icon label{
+			margin-top: 4px;
+			color: #fff;
+		}
+
+		.now-on-sale{
+			text-align: center;
+			background-color: black;
+			padding-top: 50px;
+			height: 600px;
+			color: #fff;
+		}
+
+		.urunler{
+			display: flex;
+			justify-content: center;			
+		}
+
+		.urun-resmi{
+			margin: 50px;
+		}
+
+		.urunler img{
+			width: 230px;
+			height: 250px;
+		}
+
+		.urun-basligi h2{
+			font-size: 20px;
+		}
+
+		.about-us{
+			width: 100%;
+			height: 500px;
+			background: url(resimler/aaaa.jpg) no-repeat;
+			background-size: cover;
+		}
+
+		.cerceve{
+			width: 50%;
+			height: 500px;
+			background-color: black;
+			opacity: 0.7;
+			color: white;
+		}
+
+		.container{
+			width: 800px;
+		}
+
+		.about-us-text{
+			text-align: center;
+			width: 50%;
+			margin: 150px 150px;
+		}
+
+
+		.input-group{
+			display: block;
+		}
+
+		.contact{
+			display: flex;
+			background-color: black;
+			color: #fff;
+			height: 800px;
+			justify-content: center;
+		}
+
+		.name label{
+			color: #fff;
+			font-size: 18px;
+			margin: 5px;
+		}
+
+		.input input{
+			width: 450px;
+			padding: 10px;
+			margin: 5px;
+			background-color: transparent;
+			outline: 0;
+			border: 1px solid #fff;
+		}
+
+		.input textarea{
+			width: 450px;
+			height: 150px;
+			background-color: transparent;
+			outline: 0;
+			border-color: 1px solid #fff;
+			margin: 5px;
+		}
+
+		.buton{
+			width: 80px;
+			border: 1px solid #fff;
+			padding: 10px;
+			text-align: center;
+			align-items: center;
+			text-decoration: none;
+			color: white;
+			margin: 5px;
+	}
+
+		.full{
+			margin-top: 80px;	
+		}
+
+		.sag-kisim{
+			margin-left: 100px;
+			line-height: 24px;
+			font-size: 20px;
+		}
+
+		.buton:hover{
+			background-color: #fff;
+			text-decoration: none;
+			color: black;
+		}
+
+		input:focus{
+			background-color: lightgray;
+			color: black;			
+		}
+
+	</style>
+	
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 	
+<body>
+	<div class="header-article">	
+	<div class="header">
+		<div class="logo">
+			<h2><a href="#">THENORTHPOLE</a></h2>
+		</div>
+
+	<div class="dropdown-group">
+
+		<div class="dropdown">
+			<button class="btn btn-transparent dropdown-toggle" type="button" data-toggle="dropdown"><label>SHOP</label>
+			<span class="caret"></span></button>
+			<ul class="dropdown-menu">
+				 <li><a href="#">BACKPACKS</a></li>
+				 <li><a href="#">DUFFLE BAGS</a></li>
+				 <li><a href="#">TRAVEL PACKS</a></li>
+			</ul>
+		</div>
+
+		<div class="dropdown">
+		  	<button class="btn btn-transparent dropdown-toggle" type="button" data-toggle="dropdown"><label>ABOUT</label>
+		  	<span class="caret"></span></button>
+		  	<ul class="dropdown-menu">
+		    	<li><a href="#">VISION</a></li>
+		    	<li><a href="#">MISION</a></li>
+		   	    <li><a href="#">WE</a></li>
+		 	</ul>
+		</div>
+
+		<div class="dropdown">
+		 	<button class="btn btn-transparent dropdown-toggle" type="button" data-toggle="dropdown"><label>FORUM</label>
+		</div>
+
+		<div class="dropdown">
+		  	<button class="btn btn-transparent dropdown-toggle" type="button" data-toggle="dropdown"><label>CONTACT</label>
+		 	<span class="caret"></span></button>
+		  	<ul class="dropdown-menu">
+		   		<li><a href="#">TELEPHONE</a></li>
+		   		<li><a href="#">EMAIL</a></li>
+		    	<li><a href="#">ADDRESS</a></li>
+		  	</ul>
+		</div>
+		
+	<div class="search-group">
+		<div class="search">
+			<input type="text" name="search" placeholder="Search..." maxlength="15" minlength="15"></div>			
+		</div>
+
+		<div class="user-icon-group">
+		<div class="user-icon">
+			<img src="resimler/user.png"><label>Log in</label>
+		</div>	
+		</div>
+
+		<div class="basket-icon-group">
+		<div class="basket-icon">
+			<img src="resimler/shopping-basket.png"><label>0</label>
+		</div>	
+		</div>
+
+		</div>	
+		</div>
+
+	<div class="article">
+	  <div class="article-text">
+		<div class="article-baslik">
+			<h1>PLAN YOUR ADVENTURE</h1>
+		</div>
+
+		<div class="shopnow">
+			<a href="#">SHOP NOW</a>
+		</div>
+	  </div>
+	</div>
+ </div>	
+
+	<div class="article2">
+		<div class="article2-yazi">
+			<div class="article2-baslik">
+				<h1>NEW ARRIVALS</h1>
+			</div>
+
+			<div class="article2-aciklama">
+				<p><a href="#">SHOP NOW</a></p>
+			</div>
+		</div>
+
+		<div class="article2-resim">
+			<img src="resimler/bag.webp" style="height: 700px;">
+		</div>
+	</div>	
+
+	<div class="article3">
+		<div class="article3-image"><img src="resimler/adam1.png"></div>
+		<div class="article3-image"><img src="resimler/adam2.png"></div>
+		<div class="article3-image"><img src="resimler/adam3.png"></div>
+
+	</div>
+
+	<div class="now-on-sale">
+		<div class="now-on-sale-baslik">
+			<h2>NOW ON SALE</h2>
+		</div>
+
+		<div class="now-on-sale-p">
+			<p>UP TO 50% OFF</p>
+		</div>
+				<div class="urunler">
+					<div class="urun-bilgileri">
+					<div class="urun-resmi">
+						<img src="resimler/b1.png">
+					</div>
+					<div class="urun-basligi">
+						<h2>CANVAS BACKPACK</h2>
+					</div>
+					<div class="fiyat">
+						<label>$67.50</label>
+				</div>
+			</div>
+
+					<div class="urun-bilgileri">
+					<div class="urun-resmi">
+						<img src="resimler/b2.png">
+					</div>
+					<div class="urun-basligi">
+						<h2>TECHNICAL PACK</h2>
+					</div>
+					<div class="fiyat">
+						<label>$104.00</label>
+				</div>
+			</div>
+
+					<div class="urun-bilgileri">
+					<div class="urun-resmi">
+						<img src="resimler/b3.png">
+					</div>
+					<div class="urun-basligi">
+						<h2>CAMO BACKPACK</h2>
+					</div>
+					<div class="fiyat">
+						<label>$76.00</label>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="about-us">
+			<div class="cerceve">
+
+	<div class="container">
+		<div class="about-us-text">
+				<div class="cerceve-baslik">
+					<h2>ABOUT US</h2>
+				</div>
+				<div class="cerceve-yazi">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. </p>
+				</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+
+	<div class="contact">
+		<div class="full">
+		<div class="sol-kisim">
+			<div class="input-group">
+				<div class="name">
+					<label>Name / Surname *</label>
+				</div>
+				<div class="input">
+					<input type="text" name="fname" placeholder="Name-Surname" required="">
+				</div>
+
+				<div class="input-group">
+				<div class="name">
+					<label>Enter your email *</label>
+				</div>
+				<div class="input">
+					<input type="text" name="fname" placeholder="Email" required="">
+				</div>
+
+				<div class="input-group">
+				<div class="name">
+					<label>Enter your subject</label>
+				</div>
+				<div class="input">
+					<input type="text" name="fname" placeholder="Subject" required="">
+				</div>
+
+				<div class="input-group" placeholder="subject">
+				<div class="name">
+					<label>Enter your message</label>
+				</div>
+				<div class="input">
+					<textarea style="resize: none;" placeholder="Message" required="">
+						
+					</textarea>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>	
+
+		<a href="#"><div class="buton">Send</div></a>	
+</div>
+</div>
+<div class="sag-kisim full">
+		<div class="sag-kisim-baslik">
+			<h2>CONTACT</h2>
+		</div>
+
+		<div class="sag-kisim-aciklama">
+			<p>Lorem ipsum dolor sit amet, <br>
+			 consectetur adipisicing elit, sed do <br>
+			 eiusmod tempor incididunt ut labore <br>
+			 et dolore magna aliqua. Ut enim ad minim  <br>
+			 veniam, quis nostrud exercitation laboris. <br><br>
+
+			info@my-domain.com
+			Tel:1-622-66-55</pre></p>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
