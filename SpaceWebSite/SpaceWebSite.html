@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="SpaceX Örnek Uygulama Web Sitesi">
+	<meta name="keywords" content="SpaceX, Web, Site, Uygulama">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="admin">
+	<title>Örnek Web Sitesi</title>
+
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+
+		html, body{
+			background-color: #142841;
+			padding: 0;
+		}
+
+		.container{
+			width: 1200px;
+			margin: 50px auto;
+		}
+
+		.article{			
+			height: 770px;
+			background-color: #15273D;
+			box-shadow: 1px 1px 4px 4px #5f5f5f;
+			justify-content: center;
+			color: white;
+		}
+
+		.header{
+			padding:10px 30px;
+			height: 200px;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.header h3 a{
+			margin-left: 0;
+			font-size: 24px;
+			color: #e8e8e8;
+			text-decoration: none;
+		}
+
+		.menu-liste{
+			list-style: none;
+			display: flex;
+			justify-content: center;		
+		}
+
+		.menu-liste li a{
+			text-decoration: none;
+			color: #fff;
+			font-size: 20px;
+			padding:10px 50px;
+			background-color:#17375C;
+			border-right: 1px solid #fff;
+		}
+
+		.menu-liste li:last-of-type a{
+			border-right: none;
+		}
+
+		.menu-liste li a:hover{
+			background-color: #4674E6;
+		}
+
+		.article2 {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.sol{
+			display: block;
+			height: 600px;
+			width: 600px;
+			margin: 50px 40px;			
+		}
+
+		.sol h2{
+			color: #fff;
+			font-size: 40px;
+			margin-top: 10px;	
+		}
+
+		.sol h4{
+			font-size: 22px;
+			color: #55a5db;
+			margin-top: -20px;		
+		}
+
+		.cizgi{
+			width: 120px;
+			height: 1px;
+			background-color: white;
+			margin-top: -10px;			
+		}
+
+		.sol p{
+			justify-content: center;
+		}
+
+		.icons{
+			display: flex;
+			justify-content: center;
+			float: left;
+			margin:50px 0;
+		}
+
+		.icons .resim{
+			width: 50px;
+			height: 50px;
+			border-radius: 20px;
+			border: 1px solid white;
+			background-color: #fff;
+			margin-left: 8px;
+		}
+
+		.buttons{			
+			display: flex;		
+			margin: 0;		
+		}
+
+		.button1{
+			border-radius: 20px;
+			width: 170px;
+			padding: 10px;
+			background-color: transparent;
+			border: 1px solid #3173c4;
+			text-align: center;
+			list-style: none;
+		}
+
+		.button1 a{
+			text-decoration: none;
+			color: #3173c4;
+			font-size: 20px;
+		}
+
+		.button1:hover{
+			background-color:#fff ;
+		}
+
+		.sag .image{
+			float: right;
+			width: 475px;
+			height: 475px;
+			margin-right: 25px;
+		}
+
+		a{
+			text-decoration: none;
+			color: #3173c4;;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">	
+	<div class="article">
+	<div class="header">
+		<h3><a href="#">SPACEX</a></h3>
+		<ul class="menu-liste">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Job</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</div>
+	<div class="article2">
+		<div class="sol">
+			<h2>WELCOME</h2>
+			<h4>To SpaceX World</h4>
+			<div class="cizgi"></div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor </p>
+
+			<div class="buttons">
+			<a href="#"><div class="button1">EXPLORE</div></a>
+			<a href="#"><div class="button1" style="margin-left: 10px;">WATCH US</div></a>
+				</div>			
+
+			<div class="icons">
+				<a href="#"><img class="resim" src="resimler/facebook.png"></a>
+				<a href="#"><img class="resim" src="resimler/instagram.png"></a>
+				<a href="#"><img class="resim" src="resimler/twitter.png"></a>
+				<a href="#"><img class="resim" src="resimler/linkedin.png"></a>
+			</div>
+				</div>		
+			<div class="sag">
+			<img class="image" src="resimler/astronot.png">
+			</div>						
+				
+				</div>				
+			</div>			
+		</div>
+	</div>
+</body>
+</html>
