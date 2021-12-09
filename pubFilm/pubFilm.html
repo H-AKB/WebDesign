@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>PUB İNDİR</title>
+
+	<style>
+		/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, font, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			outline: 0;
+			font-size: 100%;
+			vertical-align: baseline;
+			background: transparent;
+		}
+		body {
+			line-height: 1;
+		}
+		ol, ul {
+			list-style: none;
+		}
+		blockquote, q {
+			quotes: none;
+		}
+		blockquote:before, blockquote:after,
+		q:before, q:after {
+			content: '';
+			content: none;
+		}
+
+		/* remember to define focus styles! */
+		:focus {
+			outline: 0;
+		}
+
+		/* remember to highlight inserts somehow! */
+		ins {
+			text-decoration: none;
+		}
+		del {
+			text-decoration: line-through;
+		}
+
+		/* tables still need 'cellspacing="0"' in the markup */
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+
+		*{
+			box-sizing: border-box;
+		}
+
+		html, body{
+			background-color: rgb(29 29 29);
+		}
+
+		.container1{
+			width: 1600px;			
+			margin: 0 auto;
+		}
+
+		.container2{
+			width: 1700px;
+			margin: 0 auto;
+		}
+
+		.header{
+			background-image: linear-gradient(to right , #701f15 , #ba3f23);
+			height: 100px;
+			display: flex;
+			justify-content: space-between;	
+			box-shadow: 10px rgb(196 39 0);	
+			border: 10px ridge #a52c00;	
+		}
+
+		marquee{
+			font-size: 45px;
+			font-family: summer blaster;
+			color: white;
+		}
+
+		.header-logo{	
+			margin: auto;		
+			margin-top: 10px;
+		}
+
+		.menu-satiri{
+			width: 100%;
+			height: 50px;
+			background-color: rgb(28 28 28);	
+			font-family: 'Merienda', cursive;	
+			font-weight: 100;	
+			font-size: 16px;
+			letter-spacing: 1px;	
+			padding-top: 40px;
+		}
+
+		.dropdown img, .search img{
+			width: 20px;
+			height: 20px;
+			margin: 5px;
+		}
+
+		.dropdown-group{
+			display: flex;
+			justify-content: space-between;		
+		}
+
+		.dropdown label{
+			text-align: center;
+			cursor: pointer;
+			margin-left: 5px;
+		}
+
+		.dropdown-list{
+			background-color: rgb(28 28 28);
+			border: none;
+			color: #fff;
+			margin-top: 8px;
+			font-size: 17px;
+			padding: 10px;
+		}
+
+		.dropdown-list:hover{
+			background-image: linear-gradient(to right , #701f15 , #ba3f23);
+			border-radius: 5px;
+		}
+
+		.dropdown-menu li{
+			padding: 10px;
+		}
+
+		.dropdown-menu li:hover{
+			padding: 10px;
+		}
+
+		.article{
+			margin-top: 10px;
+			background-color: rgb(28 28 28);
+			height: 160px;
+			border-top: 2px solid rgb(196 39 0);
+			box-shadow: 0 -2px 2px -2px rgb(196 39 0);
+			padding: 10px;
+		}
+
+		.ust-butonlar{
+			display: flex;
+			margin-top: 15px;
+			flex-wrap: wrap;
+			align-content: flex-start;
+			background-color: rgb(42 42 42);
+		}
+
+		.buton{
+			width: 420px;
+			border-bottom: 1px solid rgb(60 60 60);
+			border-left: 1px solid rgb(60 60 60);
+			padding: 15px;				
+		}
+
+		.ust-butonlar a{
+			color: white;
+		}
+
+		.ust-butonlar a:hover{
+			color: white;
+			text-decoration: none;
+		}
+
+		.ust-butonlar .border-top::after, .border-right::after {
+			content: "";
+			border-right: 1px solid rgb(60 60 60);
+		}
+
+		.border-top{
+			display: flex;
+			border-top: 1px solid rgb(60 60 60);
+		}
+
+		.border-right{
+			display: flex;
+		}
+
+		.border-top::after{
+			border-right: 1px solid rgb(156 156 156);
+		}
+
+		.article2{
+			display: flex;
+		}
+
+		.kategori-menu{
+			width: 20%;
+			height: 500px;
+			background-color: rgb(42 42 42);
+			margin: -24px 10px;
+		}
+
+		.buton-kategori{
+			width: 100%;
+			border-bottom: 1px solid black;
+			padding: 15px;
+			color: #fff;
+		}
+
+		.film-listesi{
+			padding: 25px;			
+		}
+
+		.sag-kisim{
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			align-content: flex-start;
+		}
+
+		.film-ismi, .saat{
+			text-decoration: none;
+			margin: 5px;
+		}
+
+		.saat{
+			margin-top: -5px;
+		}
+
+		.saat img{
+			margin: 5px 4px;
+		}
+
+		.saat i{
+			margin-right: 5px;
+		}
+
+		label{
+			color: white;
+		}
+
+		label:hover{
+			cursor: pointer;
+		}
+
+		.film-listesi{
+			width: 25%;
+			height: 50%;
+		}
+
+		.film-resmi img{
+			width: 300px;
+			height: 200px;
+			border: 7px ridge rgb(60 60 60);
+		}
+
+		.buton-kategori:hover, .buton:hover{
+			background-color: black;
+			text-decoration: none;
+		}
+
+		.search{
+			color: white;
+			font-size: 24px;
+			margin-top: 10px;
+		}
+
+	</style>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 	
+
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@300&family=Merienda&family=Orbitron&display=swap');
+</style>
+
+</head>
+<body>
+		<div class="header">
+			<div class="header-logo">
+				<marquee width="1200px" direction="right" height="100px" behavior="alternate" scrollamount="5">
+				Filmizm - Film indirme sitesi
+				</marquee>
+			</div>		
+		</div>			
+		<div class="menu-satiri">	
+
+					<div class="container1">
+				<div class="dropdown-group">
+
+			<div class="dropdown">					
+				<button class="dropdown-list" type="button" data-toggle="dropdown"><i class="fas fa-film"></i><label>Filmler</label>
+				<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					 <li><a href="#">Animasyon</a></li>
+					 <li><a href="#">Belgesel</a></li>
+					 <li><a href="#">Dram</a></li>
+					 <li><a href="#">Gerilim</a></li>
+					 <li><a href="#">Komedi</a></li>
+					 <li><a href="#">Müzikal</a></li>
+					 <li><a href="#">Suç-Polisiye</a></li>				 
+				</ul>
+			</div>
+
+			<div class="dropdown">
+			  	<button class="dropdown-list" type="button" data-toggle="dropdown"><i class="fas fa-tv"></i><label>Diziler</label>
+			  	<span class="caret"></span></button>
+			  	<ul class="dropdown-menu">
+			    	<li><a href="#">Peaky Blinders</a></li>
+			    	<li><a href="#">After Life</a></li>
+			   	    <li><a href="#">Scrubs</a></li>
+			   	    <li><a href="#">How I Met Your Mother</a></li>
+			   	    <li><a href="#">Friends</a></li>
+			   	    <li><a href="#">Modern Family</a></li>
+			   	    <li><a href="#">Supernatural</a></li>
+			 	</ul>
+			</div>
+
+			<div class="dropdown">
+			 	<button class="dropdown-list" type="button" data-toggle="dropdown"><i class="fas fa-video"></i><label>Belgesel</label>
+			</div>
+
+			<div class="dropdown">
+			  	<button class="dropdown-list" type="button" data-toggle="dropdown"><i class="fas fa-headphones"></i><label>Albümler</label>
+			 	<span class="caret"></span></button>
+			  	<ul class="dropdown-menu">
+			   		<li><a href="#">TELEPHONE</a></li>
+			   		<li><a href="#">EMAIL</a></li>
+			    	<li><a href="#">ADDRESS</a></li>
+			  	</ul>
+			</div>
+
+			<div class="dropdown">
+			  	<button class="dropdown-list" type="button" data-toggle="dropdown"><label><i class="fas fa-laptop"></i>Programlar</label>
+			  	<span class="caret"></span></button>
+			  	<ul class="dropdown-menu">
+			    	<li><a href="#">VISION</a></li>
+			    	<li><a href="#">MISION</a></li>
+			   	    <li><a href="#">WE</a></li>
+			 	</ul>
+			</div>
+
+			<div class="dropdown">
+			  	<button class="dropdown-list" type="button" data-toggle="dropdown"><label><i class="fas fa-gamepad"></i>Oyunlar</label>
+			  	<span class="caret"></span></button>
+			  	<ul class="dropdown-menu">
+			    	<li><a href="#">VISION</a></li>
+			    	<li><a href="#">MISION</a></li>
+			   	    <li><a href="#">WE</a></li>
+			 	</ul>
+			</div>
+
+
+			<div class="dropdown">
+			  	<button class="dropdown-list" type="button" data-toggle="dropdown"><label><i class="fas fa-exclamation-triangle"></i>Telif Hakkı</label>
+			  	<span class="caret"></span></button>
+			  	<ul class="dropdown-menu">
+			    	<li><a href="#">VISION</a></li>
+			    	<li><a href="#">MISION</a></li>
+			   	    <li><a href="#">WE</a></li>
+			 	</ul>
+			</div>
+
+
+			<div class="dropdown">
+			  	<button class="dropdown-list" type="button" data-toggle="dropdown"><i class="fas fa-check"></i><label>İstek Yap</label>
+			  	<span class="caret"></span></button>
+			  	<ul class="dropdown-menu">
+			    	<li><a href="#">VISION</a></li>
+			    	<li><a href="#">MISION</a></li>
+			   	    <li><a href="#">WE</a></li>
+			 	</ul>
+			</div>
+
+
+			<div class="dropdown">
+			  	<button class="dropdown-list" type="button" data-toggle="dropdown"><i class="far fa-question-circle"></i><label>Yardım</label>
+			  	<span class="caret"></span></button>
+			  	<ul class="dropdown-menu">
+			    	<li><a href="#">VISION</a></li>
+			    	<li><a href="#">MISION</a></li>
+			   	    <li><a href="#">WE</a></li>
+			 	</ul>
+			</div>
+
+		<a href="#"><div class="search"><i class="fas fa-search"></i></div></a>
+		</div>
+	</div>
+		<div class="container2">
+			<div class="article">
+				<div class="ust-butonlar">
+					<div class="border-top">
+						<a href="#"><div class="buton">4K Filmler</div></a>
+						<a href="#"><div class="buton">1080p Filmler</div></a>
+						<a href="#"><div class="buton">720p Filmler</div></a>
+						<a href="#"><div class="buton">M1080p Filmler</div></a></div>
+					<div class="border-right">					
+						<a href="#"><div class="buton">M720p Filmler</div></a>
+						<a href="#"><div class="buton">480p Filmler</div></a>					
+						<a href="#"><div class="buton">3D Filmler</div></a>
+						<a href="#"><div class="buton">Yerli filmler</div></a></div>
+					</div>	
+			</div>
+
+			<div class="article2">
+				<div class="kategori-menu">
+					<ul>
+						<li><a href="#"><div class="buton-kategori">Tümü</div></a></li>
+						<li><a href="#"><div class="buton-kategori">3D Filmler</div></a></li>
+						<li><a href="#"><div class="buton-kategori">480p Filmler</div></a></li>
+						<li><a href="#"><div class="buton-kategori">4K Filmler</div></a></li>
+						<li><a href="#"><div class="buton-kategori">720p Filmler</div></a></li>
+						<li><a href="#"><div class="buton-kategori">1080p Filmler</div></a></li>
+						<li><a href="#"><div class="buton-kategori">3D Filmler</div></a></li>
+						<li><a href="#"><div class="buton-kategori">480p Filmler</div></a></li>
+						<li><a href="#"><div class="buton-kategori">4K Filmler</div></a></li>
+				</div>
+
+			<div class="sag-kisim">
+				<div class="film-listesi">
+					<div class="film-resmi">
+						<img src="resimler/life.jfif">
+					</div>
+					<div class="film-ismi">
+						<a href="#"><label>Hayat Güzeldir filmini indir</label></a>
+					</div>
+					<div class="saat">
+						<a href="#"><label><i class="far fa-clock"></i>19 saat önce indirildi</label></a>
+					</div>
+				</div>
+
+				<div class="film-listesi">
+					<div class="film-resmi">
+						<img src="resimler/sr.jfif">
+					</div>
+					<div class="film-ismi">
+						<a href="#"><label>Esaretin Bedeli filmini indir</label></a>
+					</div>
+					<div class="saat">
+						<a href="#"><label><i class="far fa-clock"></i>3 saat önce indirildi</label></a>
+					</div>
+				</div>
+
+
+				<div class="film-listesi">
+					<div class="film-resmi">
+						<img src="resimler/askvegurur.jpg">
+					</div>
+					<div class="film-ismi">
+						<a href="#"><label>Aşk ve Gurur filmini indir</label></a>
+					</div>
+					<div class="saat">
+						<a href="#"><label><i class="far fa-clock"></i>24 saat önce indirildi</label></a>
+					</div>
+				</div>
+
+				<div class="film-listesi">
+					<div class="film-resmi">
+						<img src="resimler/bohemian.jpg">
+					</div>
+					<div class="film-ismi">
+						<a href="#"><label>Bohemian Rhapsody filmini indir</label></a>
+					</div>
+					<div class="saat">
+						<a href="#"><label><i class="far fa-clock"></i>1 saat önce indirildi</label></a>
+					</div>
+				</div>
+
+				<div class="film-listesi">
+					<div class="film-resmi">
+						<img src="resimler/terminal.jpg">
+					</div>
+					<div class="film-ismi">
+						<a href="#"><label>Terminal filmini indir</label></a>
+					</div>
+					<div class="saat">
+						<a href="#"><label><i class="far fa-clock"></i>Dün indirildi</label></a>
+					</div>
+				</div>
+
+				<div class="film-listesi">
+					<div class="film-resmi">
+						<img src="resimler/küp.jpg">
+					</div>
+					<div class="film-ismi">
+						<a href="#"><label>Cube filmini indir</label></a>
+					</div>
+					<div class="saat">
+						<a href="#"><label><i class="far fa-clock"></i>2 saat önce indirildi</label></a>
+					</div>
+				</div>
+
+				<div class="film-listesi">
+					<div class="film-resmi">
+						<img src="resimler/ts.jpg">
+					</div>
+					<div class="film-ismi">
+						<a href="#"><label>Truman Show filmini indir</label></a>
+					</div>
+					<div class="saat">
+						<a href="#"><label><i class="far fa-clock"></i>24 saat önce indirildi</label></a>
+					</div>
+				</div>
+
+				<div class="film-listesi">
+					<div class="film-resmi">
+						<img src="resimler/op.jpg">
+					</div>
+					<div class="film-ismi">
+						<a href="#"><label>Otomatik Portakal filmini indir</label></a>
+					</div>
+					<div class="saat">
+						<a href="#"><label><i class="far fa-clock"></i>1 saat önce indirildi</label></a>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>		
+</body>
+</html>
